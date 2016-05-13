@@ -1,0 +1,17 @@
+{
+  "title": "Jpanize for Slack",
+  "name": "japanize-slack",
+  "version": "0.0.1",
+  "description": "japanize Slack UI",
+  "main": "index.js",
+  "author": "tomoki1207",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "japanize",
+    "slack"
+  ]
+}
