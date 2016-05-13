@@ -1,5 +1,5 @@
-# Jpanize for Slack
-japanize Slack UI
+# Japanize for Slack
+Firefox Addon of japanize for Slack
 
 ## Inspired By
 
