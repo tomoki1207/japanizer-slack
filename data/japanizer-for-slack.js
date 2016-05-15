@@ -37,6 +37,7 @@
     'Customize Slack': 'Slackのカスタマイズ',
     'Statistics': '統計情報',
     'Billing': 'プラン',
+    'Sign out of ' : 'サインアウト',
     ' Sign in to another team …': '別チームへサインイン …',
     "\n											CHANNELS\n											": 'チャネル',
     'Browse all channels': 'すべてのチャネルを表示',
@@ -46,10 +47,32 @@
     ' Invite People': '招待',
 
     // Main page - messages
+    "\n				Only paid teams can start calls from channels.\n			" : '音声通話(有料版のみ)',
+    'Channel Settings' : 'チャネル設定',
+    'Show Channel Details' : 'チャネル詳細の表示',
+    'Show Mentions & Reactions' : 'あなた宛の発言&リアクション',
+    'Show Starred Items' : 'スターを表示',
+    'More Items' : 'その他',
+    'Your Files' : 'あなたのファイル',
+    'All Files' : '全てのファイル',
+    'Team Directory' : 'チームディレクトリ',
+    'Help' : 'ヘルプ',
+    "What's New" : 'お知らせ',
     ' (edited)': '(編集済)',
-
+    'Add reaction …' : 'リアクションの追加',
+    'Copy link' : 'リンクをコピー',
+    'Show message actions' : 'メッセージへのアクションを表示',
+    'Mark unread' : '未読にする',
+    'Remind me about this ' : 'リマインド',
+    'in 20 minutes' : '20分後',
+    'in 1 hour' : '1時間後',
+    'in 3 hours' : '3時間後',
+    'Tomorrow' : '明日',
+    'Next Week' : '来週',
+    'Delete message' : 'メッセージを削除',
 
     'Narrow your search': '絞込検索',
+    'Learn more' : 'kwsk'
   };
 
   var placeholders = {
