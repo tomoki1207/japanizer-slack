@@ -16,10 +16,47 @@
     'Support': 'サポート',
     'Blog': 'ブログ',
     'Sign in': 'サインイン',
+    ' Sign in to ' : 'サインイン ',
+    'Log in': 'サインイン',
     'Create a new team': '新たなチームを作成',
-    'Enter your email address and password': 'e-mailアドレスとパスワードを入力',
-    'Keep me signed in': 'サインインしたままにする',
-    'I fogot my password': 'パスワードを忘れた場合',
+    ' Keep me signed in': 'サインインしたままにする',
+    'I forgot my password': 'パスワードを忘れた場合',
+    "\n			Trying to create a team?\n				" : 'チームを作成しますか?',
+    'Sign up on the home page' : 'サインアップ',
+    " to get started.\n		" : 'して始めましょう',
+    ' Sorry, you entered an incorrect email address or password.' : '正しいメールアドレスとパスワードを入力してください.',
+
+    // Sign in page - footer
+    'Slack Guides' : 'Slackガイド',
+    'Video Guides' : 'ビデオガイド',
+    'App Directory' : 'Appディレクトリ',
+    'Jobs' : 'お仕事',
+    'Customers' : 'お客様',
+    'Developers' : '開発者',
+    'Events' : 'イベント',
+    'Podcast' : 'ポッドキャスト',
+    'Slack Shop' : 'Slackショップ',
+    'Privacy' : 'プライバシー',
+    'Security' : 'セキュリティ',
+    'Terms of Service' : '利用規約',
+    'Policies' : 'ポリシー',
+    'Download desktop app' : 'デスクトップアプリ',
+    'Download mobile app' : 'モバイルアプリ',
+    'Brand Guidelines' : 'ブランドガイドライン',
+    'Slack at Work' : 'Slackを仕事で',
+    'Status' : 'ステータス',
+
+    // Sign out page
+    'Signed Out' : 'サインアウトしました',
+    'Sign back in' : '再サインイン',
+
+    // Desktop Notifications
+    "\n		Slack needs your permission to " : 'Slackからの通知を許可してください ',
+    'enable desktop notifications' : '有効化',
+    "\n		We strongly recommend enabling desktop notifications if you'll be using Slack on this computer.\n		" : 'このPCでSlackを利用する場合,デスクトップ通知を有効化することをお勧めします.',
+    'Enable notifications' : '有効化',
+    'Ask me next time' : '後で',
+    'Never ask again on this computer' : 'このPCでは使わない',
 
     // Main page - menu
     'Notifications': '通知',
@@ -37,42 +74,42 @@
     'Customize Slack': 'Slackのカスタマイズ',
     'Statistics': '統計情報',
     'Billing': 'プラン',
-    'Sign out of ' : 'サインアウト',
+    'Sign out of ': 'サインアウト',
     ' Sign in to another team …': '別チームへサインイン …',
     "\n											CHANNELS\n											": 'チャネル',
     'Browse all channels': 'すべてのチャネルを表示',
     'DIRECT MESSAGES ': 'ダイレクトメッセージ',
     'Direct Messages': 'ダイレクトメッセージ',
     'Open a Direct Message': 'ダイレクトメッセージを開く',
-    ' Invite People': '招待',
+    ' Invite People': '招待する',
 
     // Main page - messages
-    "\n				Only paid teams can start calls from channels.\n			" : '音声通話(有料版のみ)',
-    'Channel Settings' : 'チャネル設定',
-    'Show Channel Details' : 'チャネル詳細の表示',
-    'Show Mentions & Reactions' : 'あなた宛の発言&リアクション',
-    'Show Starred Items' : 'スターを表示',
-    'More Items' : 'その他',
-    'Your Files' : 'あなたのファイル',
-    'All Files' : '全てのファイル',
-    'Team Directory' : 'チームディレクトリ',
-    'Help' : 'ヘルプ',
-    "What's New" : 'お知らせ',
+    "\n				Only paid teams can start calls from channels.\n			": '音声通話(有料版のみ)',
+    'Channel Settings': 'チャネル設定',
+    'Show Channel Details': 'チャネル詳細の表示',
+    'Show Mentions & Reactions': 'あなた宛の発言&リアクション',
+    'Show Starred Items': 'スターを表示',
+    'More Items': 'その他',
+    'Your Files': 'あなたのファイル',
+    'All Files': '全てのファイル',
+    'Team Directory': 'チームディレクトリ',
+    'Help': 'ヘルプ',
+    "What's New": 'お知らせ',
     ' (edited)': '(編集済)',
-    'Add reaction …' : 'リアクションの追加',
-    'Copy link' : 'リンクをコピー',
-    'Show message actions' : 'メッセージへのアクションを表示',
-    'Mark unread' : '未読にする',
-    'Remind me about this ' : 'リマインド',
-    'in 20 minutes' : '20分後',
-    'in 1 hour' : '1時間後',
-    'in 3 hours' : '3時間後',
-    'Tomorrow' : '明日',
-    'Next Week' : '来週',
-    'Delete message' : 'メッセージを削除',
+    'Add reaction …': 'リアクションの追加',
+    'Copy link': 'リンクをコピー',
+    'Show message actions': 'メッセージへのアクションを表示',
+    'Mark unread': '未読にする',
+    'Remind me about this ': 'リマインド',
+    'in 20 minutes': '20分後',
+    'in 1 hour': '1時間後',
+    'in 3 hours': '3時間後',
+    'Tomorrow': '明日',
+    'Next Week': '来週',
+    'Delete message': 'メッセージを削除',
 
     'Narrow your search': '絞込検索',
-    'Learn more' : 'kwsk'
+    'Learn more': 'kwsk'
   };
 
   var placeholders = {
@@ -143,8 +180,7 @@
 
   var translateDayDivider = function(node) {
     var monthandday = node.data.split(' ');
-    console.log(node.data);
-    if (monthandday.length !== 2){
+    if (monthandday.length !== 2) {
       node.data = dates[node.data];
     } else {
       // parseInt で序数を削除
@@ -186,6 +222,9 @@
   };
 
   // ------------------ Do Translate --------------------------
+
+  // initial translate
+  translateNode(document);
 
   new MutationObserver(function(records, observed) {
     records.forEach(function(record) {
