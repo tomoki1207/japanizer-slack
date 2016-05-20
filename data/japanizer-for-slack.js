@@ -16,8 +16,8 @@
     'Support': 'サポート',
     'Blog': 'ブログ',
     'Sign in': 'サインイン',
-    ' Sign in to ': 'サインイン ',
     'Log in': 'サインイン',
+    'Enter your <strong>email address</strong> and <strong>password</strong>.': '<strong>メールアドレス</strong>と<strong>パスワード</strong>を入力.',
     'Create a new team': '新たなチームを作成',
     ' Keep me signed in': 'サインインしたままにする',
     'I forgot my password': 'パスワードを忘れた場合',
@@ -25,6 +25,7 @@
     'Sign up on the home page': 'サインアップ',
     " to get started.\n		": 'して始めましょう',
     ' Sorry, you entered an incorrect email address or password.': '正しいメールアドレスとパスワードを入力してください.',
+    ' You need to sign in to see this page.': 'サインインしてください',
 
     // Sign in page - footer
     'Slack Guides': 'Slackガイド',
@@ -151,6 +152,13 @@
     'Learn more': 'kwsk'
   };
 
+  // Simple pattern texts
+  // 親ノードがキャプチャされた場合にマッチしないように、正規表現の初め(^)と終わり($)を必ず指定すること
+  var patternTexts = {
+     '$1 へサインイン' : /^\s+Sign in to\s+(<span(?:[^>]+)>[a-z0-9\.\-\_]+\.slack\.com<\/span>)$/,
+    '$1のメールアドレスを持っている場合、$2アカウントを作成$3できます.' : /^If you have an <strong>\s*<span(?:[^>]+)>\s+(@[a-z0-9\.\-\_]+)\s+<\/span>\s*<\/strong> email address, you can (<a(?:[^>]+)>)create an account(<\/a>)\.$/,
+  };
+
   var placeholders = {
     'Search': '検索',
     'Search channels': 'チャネル検索',
@@ -201,7 +209,25 @@
   var translateData = function(node) {
     if (node.data in texts) {
       node.data = texts[node.data];
+      return;
     }
+
+    // ex. foo <strong>bar</strong>
+    var pNode = node.parentNode;
+    if (pNode && pNode.innerHTML in texts) {
+      pNode.innerHTML = texts[pNode.innerHTML];
+      return;
+    }
+
+    // ex. your.team.slack.com
+    Object.keys(patternTexts).forEach(function(replacement) {
+      var pattern = patternTexts[replacement];
+      if (pattern.test(node.data)) {
+        node.data = node.data.replace(pattern, replacement);
+      } else if (pNode && pattern.test(pNode.innerHTML)) {
+        pNode.innerHTML = pNode.innerHTML.replace(pattern, replacement);
+      }
+    });
   };
 
   var translateButton = function(node) {
