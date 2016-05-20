@@ -117,7 +117,7 @@
     '(on mobile)': '(モバイル)',
     '(on desktop)': '(デスクトップ)',
     " Mute this channel\n				": 'このチャネルをミュート',
-    "\n			Muting prevents all notifications from this channel and prevents the channel from appearing as unread unless you are mentioned.\n		": 'すべての通知が届かなくなり、メンションがある場合を除き未読ありチャンネルとしても表示されなくなります.',
+    "\n			Muting prevents all notifications from this channel and prevents the channel from appearing as unread unless you are mentioned.\n		": 'すべての通知が届かなくなり、メンションがある場合を除き未読ありチャネルとしても表示されなくなります.',
     'Done': '完了',
     "\n							Add an app or integration\n						": 'appやインテグレーションを追加',
     'Show Channel Details': 'チャネル詳細',
