@@ -18,6 +18,7 @@
     'Sign in': 'サインイン',
     'Log in': 'サインイン',
     'Enter your <strong>email address</strong> and <strong>password</strong>.': '<strong>メールアドレス</strong>と<strong>パスワード</strong>を入力.',
+    ' Caps Lock is on' : 'Caps Lock が有効です',
     'Create a new team': '新たなチームを作成',
     ' Keep me signed in': 'サインインしたままにする',
     'I forgot my password': 'パスワードを忘れた場合',
@@ -63,8 +64,8 @@
     'Notifications': '通知',
     'Profile & account': 'プロフィール設定',
     'Preferences': '表示設定',
-    "\n						Set yourself to ": 'モード変更 ',
-    "\n						[Away] Set yourself to ": '[不在] モード変更 ',
+    "\n						Set yourself to <strong>away</strong>\n				": '<strong>不在</strong>に設定',
+    "\n						[Away] Set yourself to <strong>active</strong>\n				": '[不在] <strong>アクティブ</strong>に設定 ',
     'away': '不在',
     'active': 'アクティブ',
     'Help & feedback': 'ヘルプ & フィードバック',
@@ -75,7 +76,6 @@
     'Customize Slack': 'Slackのカスタマイズ',
     'Statistics': '統計情報',
     'Billing': 'プラン',
-    'Sign out of ': 'サインアウト',
     ' Sign in to another team …': '別チームへサインイン …',
     "\n											CHANNELS\n											": 'チャネル',
     'Browse all channels': 'すべてのチャネルを表示',
@@ -84,7 +84,7 @@
     'Open a Direct Message': 'ダイレクトメッセージを開く',
     ' Invite People': '招待する',
 
-    // Main page - messages
+    // Main page - header
     "\n				Only paid teams can start calls from channels.\n			": '音声通話(有料版のみ)',
     'Channel Settings': 'チャネル設定',
     'Jump to date …': '日付へジャンプ …',
@@ -93,7 +93,7 @@
     'View channel details': 'チャネル詳細を見る',
     'Additional options …': '追加のオプション …',
     'Archive this channel': 'チャネルをアーカイブ',
-    "If you don't think it will be used any more and you want to clean up, archive it. The channel can be unarchived later (but everyone will have been removed).": 'もう使っていないチャネルやクリーンアップしたいチャネルをアーカイブします. チャネルはあとから元に戻すことができます(メンバは削除されます).',
+    "If you don't think it will be used any more and you want to clean up, archive it. The channel can be unarchived later (but everyone will have been removed).": 'もう使っていないチャネルや整理したいチャネルをアーカイブします. チャネルはあとから元に戻すことができます(メンバは削除されます).',
     'Convert this channel to a private channel': 'プライベートチャネルに変更',
     "Private channels are similar to channels, but they're hidden to non-members and the conversation is private. This conversion cannot be undone.": 'プライベートチャネルはチャネルと似ていますが,会話がメンバー以外からは見られません. この操作は元に戻せません.',
     'Rename this channel': 'チャネルのリネーム',
@@ -135,8 +135,11 @@
     'Team Directory': 'チームディレクトリ',
     'Help': 'ヘルプ',
     "What's New": 'お知らせ',
+
+    // Main page - messages
     ' (edited)': '(編集済)',
     'Add reaction …': 'リアクションの追加',
+    'Share message …': 'メッセージをシェア',
     'Copy link': 'リンクをコピー',
     'Show message actions': 'メッセージへのアクションを表示',
     'Mark unread': '未読にする',
@@ -146,6 +149,7 @@
     'in 3 hours': '3時間後',
     'Tomorrow': '明日',
     'Next Week': '来週',
+    'Pin to this conversation …': 'メッセージをピン留め …',
     'Delete message': 'メッセージを削除',
 
     'Narrow your search': '絞込検索',
@@ -155,8 +159,11 @@
   // Simple pattern texts
   // 親ノードがキャプチャされた場合にマッチしないように、正規表現の初め(^)と終わり($)を必ず指定すること
   var patternTexts = {
-     '$1 へサインイン' : /^\s+Sign in to\s+(<span(?:[^>]+)>[a-z0-9\.\-\_]+\.slack\.com<\/span>)$/,
-    '$1のメールアドレスを持っている場合、$2アカウントを作成$3できます.' : /^If you have an <strong>\s*<span(?:[^>]+)>\s+(@[a-z0-9\.\-\_]+)\s+<\/span>\s*<\/strong> email address, you can (<a(?:[^>]+)>)create an account(<\/a>)\.$/,
+    '$1 へサインイン': /^\s+Sign in to\s+(<span(?:[^>]+)>[a-z0-9\.\-\_]+\.slack\.com<\/span>)$/,
+    '$1のメールアドレスを持っている場合、$2アカウントを作成$3できます.': /^If you have an <strong>\s*<span(?:[^>]+)>\s+(@[a-z0-9\.\-\_]+)\s+<\/span>\s*<\/strong> email address, you can (<a(?:[^>]+)>)create an account(<\/a>)\.$/,
+    '$1 からサインアウト': /^Sign out of\s+(<strong>\s*[A-Za-z0-9]+\s*<\/strong>)$/,
+    '$1へピン留め …': /^Pin to\s*(#[a-zA-Z0-9]+)\s*…$/,
+    '$1 からサインアウトしました': /^You've been signed out of the <strong>([a-zA-Z0-9\.\-_]+)<\/strong> team\.$/,
   };
 
   var placeholders = {
