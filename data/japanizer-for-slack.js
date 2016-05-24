@@ -18,7 +18,7 @@
     "Sign in": "サインイン",
     "Log in": "サインイン",
     "Enter your <strong>email address</strong> and <strong>password</strong>.": "<strong>メールアドレス</strong>と<strong>パスワード</strong>を入力.",
-    " Caps Lock is on" : "Caps Lock が有効です",
+    " Caps Lock is on": "Caps Lock が有効です",
     "Create a new team": "新たなチームを作成",
     " Keep me signed in": "サインインしたままにする",
     "I forgot my password": "パスワードを忘れた場合",
@@ -47,6 +47,12 @@
     "Brand Guidelines": "ブランドガイドライン",
     "Slack at Work": "Slackを仕事で",
     "Status": "ステータス",
+
+    // Sign up page
+    "Enter your  email address to get started.": "メールアドレスを入力して始めましょう",
+    "Create Account": "アカウント作成",
+    "An email is on its way.": "メールを送信しました",
+    "When your email arrives, click the link provided to complete signup.": "メールが届いたらリンクをクリックしてサインアップを完了してください。",
 
     // Sign out page
     "Signed Out": "サインアウトしました",
@@ -123,6 +129,10 @@
     "\n							Add an app or integration\n						": "appやインテグレーションを追加",
     "Show Channel Details": "チャネル詳細",
     "Hide Channel Details": "閉じる",
+    "Channel Details": "チャネル詳細",
+    "Pinned Items": "ピン留めした項目",
+    "Shared Files": "シェアした項目",
+    "Notification Preferences": "通知設定",
     "Show Mentions & Reactions": "メンション&リアクション",
     "Hide Mentions & Reactions": "閉じる",
     "\n					Mentions & Reactions\n					": "メンション&リアクション",
@@ -164,6 +174,11 @@
     "$1 からサインアウト": /^Sign out of\s+(<strong>\s*[A-Za-z0-9]+\s*<\/strong>)$/,
     "$1へピン留め …": /^Pin to\s*(#[a-zA-Z0-9]+)\s*…$/,
     "$1 からサインアウトしました": /^You've been signed out of the <strong>([a-zA-Z0-9\.\-_]+)<\/strong> team\.$/,
+    "$1 の通知をミュート": /^Mute\s+(#[a-zA-Z0-9]+)$/,
+    "$1 について": /^About\s+(<span(?:[^>]+)>\s*<i(?:[^>]+)><\/i>\s*[A-Za-z0-9]+\s*<\/span>)$/,
+    "$1 メンバ": /^(\d+<span(?:[^>]+)>\s*\/\d+<\/span>)\s+Members$/,
+    "$1 へサインアップ": /^\s*Sign up for\s+([a-z0-9\.\-\_]+\.slack\.com)$/,
+    "$1のメールアドレスを持っていませんか?$2チームの管理者に連絡してみてください": /^\s*Don't have an\s+(<span(?:[^>]+)>\s+@[a-z0-9\.\-\_]+\s+<\/span>)\s+email address\?\s+(<br(?:[^>]+)>)\s+Contact your Team Administrator for an invitation\.\s*$/
   };
 
   var placeholders = {
