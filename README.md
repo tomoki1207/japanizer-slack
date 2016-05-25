@@ -22,6 +22,9 @@ Slackのチームページを翻訳するFirefoxアドオンです
 1. [jpm](https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm) を起動
   + 新しいプロファイルでFirefoxを起動してデバッグする場合: `jpm run`
   + 現在のFirefoxでデバッグする場合: `jpm watchpost --post-url http://localhost:8888`
+1. デバッグの終了
+  + `jpm run` でのデバッグ: ブラウザを閉じる
+  + `jpm watchpost` でのデバッグ: `Ctrl` + `c`
 
 ## 注意とか
 
