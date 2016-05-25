@@ -20,6 +20,7 @@
     "Enter your <strong>email address</strong> and <strong>password</strong>.": "<strong>メールアドレス</strong>と<strong>パスワード</strong>を入力.",
     " Caps Lock is on": "Caps Lock が有効です",
     "Create a new team": "新たなチームを作成",
+    "Find your team": "チームを検索",
     " Keep me signed in": "サインインしたままにする",
     "I forgot my password": "パスワードを忘れた場合",
     "\n			Trying to create a team?\n				": "チームを作成しますか?",
