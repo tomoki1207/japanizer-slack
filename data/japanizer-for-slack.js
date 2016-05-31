@@ -49,6 +49,10 @@
     "Slack at Work": "Slackを仕事で",
     "Status": "ステータス",
 
+    // Password Reset page
+    "Password Reset": "パスワードをリセット",
+    "Reset my password": "パスワードをリセットする",
+
     // Sign up page
     "Enter your  email address to get started.": "メールアドレスを入力して始めましょう",
     "Create Account": "アカウント作成",
@@ -179,7 +183,8 @@
     "$1 について": /^About\s+(<span(?:[^>]+)>\s*<i(?:[^>]+)><\/i>\s*[A-Za-z0-9]+\s*<\/span>)$/,
     "$1 メンバ": /^(\d+<span(?:[^>]+)>\s*\/\d+<\/span>)\s+Members$/,
     "$1 へサインアップ": /^\s*Sign up for\s+([a-z0-9\.\-\_]+\.slack\.com)$/,
-    "$1のメールアドレスを持っていませんか?$2チームの管理者に連絡してみてください": /^\s*Don't have an\s+(<span(?:[^>]+)>\s+@[a-z0-9\.\-\_]+\s+<\/span>)\s+email address\?\s+(<br(?:[^>]+)>)\s+Contact your Team Administrator for an invitation\.\s*$/
+    "$1のメールアドレスを持っていませんか?$2チームの管理者に連絡してみてください": /^\s*Don't have an\s+(<span(?:[^>]+)>\s+@[a-z0-9\.\-\_]+\s+<\/span>)\s+email address\?\s+(<br(?:[^>]+)>)\s+Contact your Team Administrator for an invitation\.\s*$/,
+    "パスワードをリセットするには $1 へサインインする際に使用しているメールアドレスを入力してください.": /^To reset your password, enter the email address you use to sign in to (<strong>[a-z0-9\.\-\_]+\.slack\.com<\/strong>)\.$/
   };
 
   var placeholders = {
