@@ -52,6 +52,11 @@
     // Password Reset page
     "Password Reset": "パスワードをリセット",
     "Reset my password": "パスワードをリセットする",
+    " Please enter an email address.": "メールアドレスを入力してください.",
+    " Please enter a valid email address.": "正しいメールアドレスを入力してください.",
+    "If we found an account associated with that email address, you will find an email from us in your inbox shortly.": "メールアドレスが登録されていた場合,すぐに私たちからメールが届きます.",
+    "Unsure which email you used to create your Slack account? Please contact <a href=\"mailto:feedback@slack.com\">feedback@slack.com</a>.": "どのメールアドレスでアカウントを作ったか分かりませんか? <a href=\"mailto:feedback@slack.com\">feedback@slack.com</a>へご連絡ください.",
+    "Once you have reset your password, <a href=\"/signin\">sign in</a> to your account to continue.": "パスワードをリセットしたら,<a href=\"/signin\">サインイン</a>して続けましょう.",
 
     // Sign up page
     "Enter your  email address to get started.": "メールアドレスを入力して始めましょう",
