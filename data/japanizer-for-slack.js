@@ -175,6 +175,11 @@
     "Narrow your search": "絞込検索",
     "Learn more": "kwsk",
 
+    // Quick switcher
+    "\n			Jump to a conversation\n			": "会話へジャンプ",
+    "\n				<strong>tab</strong>&nbsp; or &nbsp;<strong>↑</strong> <strong>↓</strong>&nbsp; to navigate <strong class=\"small_left_margin\" aria-label=\"Return\">↵</strong>&nbsp; to select <strong class=\"small_left_margin\" aria-label=\"Escape\">esc</strong>&nbsp; to dismiss\n			": "<strong>tab</strong>&nbsp; か &nbsp;<strong>↑</strong> <strong>↓</strong>&nbsp; で移動 <strong class=\"small_left_margin\" aria-label=\"Return\">↵</strong>&nbsp; で選択 <strong class=\"small_left_margin\" aria-label=\"Escape\">esc</strong>&nbsp; で閉じる",
+    "\n			No matches found. Did you spell it correctly?\n				": "見つかりません。スペルは正しいですか?",
+
     // Keyboard shortcuts
     "\n			Keyboard Shortcuts\n			": "キーボードショートカット",
     "Channels & DMs": "チャネル&ダイレクトメッセージ",
@@ -219,7 +224,8 @@
     "$1 メンバ": /^(\d+<span(?:[^>]+)>\s*\/\d+<\/span>)\s+Members$/,
     "$1 へサインアップ": /^\s*Sign up for\s+([a-z0-9\.\-\_]+\.slack\.com)$/,
     "$1のメールアドレスを持っていませんか?$2チームの管理者に連絡してみてください": /^\s*Don't have an\s+(<span(?:[^>]+)>\s+@[a-z0-9\.\-\_]+\s+<\/span>)\s+email address\?\s+(<br(?:[^>]+)>)\s+Contact your Team Administrator for an invitation\.\s*$/,
-    "パスワードをリセットするには $1 へサインインする際に使用しているメールアドレスを入力してください.": /^To reset your password, enter the email address you use to sign in to (<strong>[a-z0-9\.\-\_]+\.slack\.com<\/strong>)\.$/
+    "パスワードをリセットするには $1 へサインインする際に使用しているメールアドレスを入力してください.": /^To reset your password, enter the email address you use to sign in to (<strong>[a-z0-9\.\-\_]+\.slack\.com<\/strong>)\.$/,
+    "$1 チャネルを作成": /^Create a channel named (#[a-zA-Z0-9\-\_]+)$/
   };
 
   var placeholders = {
