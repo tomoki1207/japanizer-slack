@@ -173,7 +173,37 @@
     "Delete message": "メッセージを削除",
 
     "Narrow your search": "絞込検索",
-    "Learn more": "kwsk"
+    "Learn more": "kwsk",
+
+    // Keyboard shortcuts
+    "\n			Keyboard Shortcuts\n			": "キーボードショートカット",
+    "Channels & DMs": "チャネル&ダイレクトメッセージ",
+    "Previous in list: ": "上のチャネルへ移動: ",
+    "Next in list: ": "下のチャネルへ移動: ",
+    "Previous unread: ": "前の未読へ移動: ",
+    "Next unread: ": "次の未読へ移動: ",
+    "Back in history: ": "1つ前のチャネルへ移動: ",
+    "Forward in history: ": "1つ後のチャネル移動: ",
+    "Mark as read: ": "未読にする: ",
+    "Mark all as read: ": "全て既読にする: ",
+    "Quick switcher: ": "クイックスイッチャを開く: ",
+    "Browse DMs: ": "ダイレクトメッセージを開く: ",
+    "Messaging": "メッセージ",
+    "\n					Autocomplete\n					": "オートコンプリート: ",
+    "Names: ": "名前: ",
+    "Channels: ": "チャネル: ",
+    "Emoji: ": "絵文字: ",
+    "New line: ": "改行: ",
+    "Edit last message: ": "最新メッセージを編集: ",
+    "React to last message: ": "最新メッセージへリアクション: ",
+    "Extras": "その他",
+    "Toggle Flexpane: ": "フレックスペインの切替: ",
+    "Mentions: ": "メンション: ",
+    "Stars: ": "スター: ",
+    "Paste Snippet: ": "スニペットの貼付け: ",
+    "Upload a File: ": "ファイルのアップロード: ",
+    "Dismiss Dialogs: ": "ダイアログを閉じる: ",
+    "\n			Begin a message with <strong class=\"command\">/</strong> for a list of all the commands at your disposal.\n		": "始めに <strong class=\"command\">/</strong> を入力すればコマンドのリストを表示しますので何なりと"
   };
 
   // Simple pattern texts
