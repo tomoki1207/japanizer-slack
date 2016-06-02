@@ -1,8 +1,8 @@
 {
-  "title": "Japanize for Slack",
-  "name": "japanize-slack",
-  "version": "0.0.1",
-  "description": "japanize Slack UI",
+  "title": "Japanizer for Slack",
+  "name": "japanizer-slack",
+  "version": "0.1.0",
+  "description": "Japanize Slack web site (team and its associated pages only).",
   "main": "index.js",
   "author": "tomoki1207",
   "engines": {
@@ -11,7 +11,7 @@
   },
   "license": "MIT",
   "keywords": [
-    "japanize",
+    "japanese",
     "slack"
   ]
 }
