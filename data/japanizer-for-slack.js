@@ -23,11 +23,12 @@
     "Find your team": "チームを検索",
     " Keep me signed in": "サインインしたままにする",
     "I forgot my password": "パスワードを忘れた場合",
-    "\n			Trying to create a team?\n				": "チームを作成しますか?",
-    "Sign up on the home page": "サインアップ",
-    " to get started.\n		": "して始めましょう",
     " Sorry, you entered an incorrect email address or password.": "正しいメールアドレスとパスワードを入力してください.",
     " You need to sign in to see this page.": "サインインしてください",
+    "Unsure which email address? <a href=\"https://slack.com/signin/find\">We can help</a>.": "どのメールアドレスかわかりませんか? <a href=\"https://slack.com/signin/find\">お助けします</a>.",
+    "You're already signed in to this team:": "このチームにはすでにサインインしています:",
+    "You're already signed in to these teams:": "これらのチームにはすでにサインインしています:",
+    "\n			Trying to create a team?\n				<a href=\"https://slack.com/\" class=\"bold\">Sign up on the home page</a> to get started.\n		": "チームを作成しますか? <a href=\"https://slack.com/\" class=\"bold\">サインアップ</a> して始めましょう.",
 
     // Sign in page - footer
     "Slack Guides": "Slackガイド",
