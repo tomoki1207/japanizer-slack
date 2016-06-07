@@ -141,6 +141,28 @@
     "When Do Not Disturb is activated, Slack won't send desktop, mobile, or email notifications. You can manually snooze notifications by clicking the <i class=\"ts_icon ts_icon_bell_o ts_icon_inherit\"></i> icon by your name.": "通知しない時間帯を設定した場合,Slackはデスクトップでも,モバイルでも,emailでも通知しません. 名前のそばにある <i class=\"ts_icon ts_icon_bell_o ts_icon_inherit\"></i> アイコンで,手動でスヌーズ通知を設定できます",
     "Automatically disable notifications from:": "自動で通知を無効にする:",
     "change": "変更",
+    "Message Display": "メッセージ表示",
+    "Message Theme": "メッセージテーマ",
+    "Clear, friendly, and focused.": "クリーンでフレンドリー,そして見やすい.",
+    "The most messages you can fit on screen at once.": "大量のメッセージを一度に見たいなら.",
+    "Display Options": "ディスプレイオプション",
+    "\n		Display information about who is currently typing a message\n	": "誰が今メッセージを入力しているか表示する",
+    "\n		Show times with 24-hour clock ": "24時間表示",
+    "(16:00 rather than 4:00 PM)": "(4:00 PM でなく 16:00)",
+    "Emoji Style": "絵文字スタイル",
+    "Apple/International Style": "Apple/International スタイル",
+    "Google Hangouts Style": "Google Hangouts スタイル",
+    "Twitter Style": "Twitter スタイル",
+    "Emoji One Style": "Emoji One スタイル",
+    "plain text only": "プレーンテキストのみ",
+    "\n		Show JUMBOMOJI": "JUMBOMOJIを表示",
+    "Display the jumbo versions of emoji (up to 23 at a time!) in messages containing no text": "テキストを含まないメッセージで大きい絵文字(23まで)を表示する",
+    "Convert Emoticons": "エモーティコンを変換",
+    "Inline Media & Links": "インラインメディア & リンク",
+    "\n		Expand images and files uploaded to Slack\n	": "画像とファイルをSlack内で展開して表示する",
+    "\n		Expand links to images, video and audio from external sources\n	": "画像,ビデオ,オーディオへのリンクを展開して表示する",
+    "\n		Even if it is an image larger than 2MB\n	": "画像が2MBより大きくても",
+    "\n		Expand website links to show a preview of the content, when available\n	": "利用可能な場合,コンテンツのプレビューを表示するためウェブサイトへのリンクを展開して表示する",
 
     // Main page - header
     "\n				Only paid teams can start calls from channels.\n			": "音声通話(有料版のみ)",
@@ -270,7 +292,10 @@
     "$1 チャネルを作成": /^Create a channel named (#[a-zA-Z0-9\-\_]+)$/,
     "$1 表示設定": /^Your preferences for ([a-zA-Z0-9\-\_]+)$/,
     "<em>チャネル通知設定</em> からチャネル毎の通知を設定することができます. または,$1emailとモバイルの通知を設定$2できます.": /^You can override your desktop notification preference on a channel-by-channel basis by selecting <em>Channel notification preferences<\/em> in the channel menu. Or, (<a(?:[^>]+)>)set preferences for email and mobile notifications(<\/a>)\.$/,
-    "いくつかのチャネルで$1通知設定が異なります$2. また,$3emailとモバイルの通知を設定$4できます.": /^Some of your channels have (<strong(?:[^>]+)data-original-title="(?:[^"]+)"(?:[^>]+)>)different notification settings(<\/strong>). You can also (<a(?:[^>]+)>)set preferences for email and mobile notifications(<\/a>)\.$/
+    "いくつかのチャネルで$1通知設定が異なります$2. また,$3emailとモバイルの通知を設定$4できます.": /^Some of your channels have (<strong(?:[^>]+)data-original-title="(?:[^"]+)"(?:[^>]+)>)different notification settings(<\/strong>). You can also (<a(?:[^>]+)>)set preferences for email and mobile notifications(<\/a>)\.$/,
+    "$1ユーザ名$4(チームのデフォルト)$5の代わりに本名$2(チームのデフォルト)$3を表示": /^\s*(<input(?:[^>]+)>\s*)Display real names (<span(?:[^>]+)>)\(team default\)(<\/span>) instead of usernames (<span(?:[^>]+)>)\(team default\)(<\/span>)\s*$/,
+    "$1$2latinフォント$3を使用する$4アクセント付き文字を含む言語を使用する場合,フォントの外観が向上します. 有効にするにはリロードしてください.$5": /^\s*(<input(?:[^>]+)>\s*)Use font with (<a(?:[^>]+)>)extended latin character set(<\/a>)(<br>\s*<span(?:[^>]+)>)If you use a language with accented characters, this will improve font appearance. Requires reload to take effect.(<\/span>)\s*$/,
+    "$1入力したエモーティコンを絵文字へ変換します. 例えば :D は $2": /^\s*(<input(?:[^>]+)>\s*)Convert my typed emoticons to emoji, so &nbsp;:D&nbsp; becomes (<span(?:[^>]+)><\/span>)\s*$/,
   };
 
   var placeholders = {
