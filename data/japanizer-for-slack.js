@@ -163,6 +163,17 @@
     "\n		Expand links to images, video and audio from external sources\n	": "画像,ビデオ,オーディオへのリンクを展開して表示する",
     "\n		Even if it is an image larger than 2MB\n	": "画像が2MBより大きくても",
     "\n		Expand website links to show a preview of the content, when available\n	": "利用可能な場合,コンテンツのプレビューを表示するためウェブサイトへのリンクを展開して表示する",
+    "Accessible Themes": "見やすいテーマ",
+    "\n		Feeling adventurous?": "冒険へ出かけますか?",
+    "Customize your theme and share it with others": "テーマをカスタマイズしてみんなと共有する",
+    "By default, Slack searches every channel. You can change this if you’d like.": "デフォルトでSlackはすべてのチャネルを検索します. これは変更できます.",
+    "Don’t search these channels:": "これらのチャネルを検索しない:",
+    "Slack marks a channel read as soon as you view it. You can change this if you’d like.": "チャネルを見るとSlackはすぐに既読にします. これは変更できます.",
+    "When I view a channel:": "チャネルを見たとき:",
+    "\n		Start me where I left off, and mark the channel read\n	": "前回まで見たところから始めて,チャネルを既読にする",
+    "\n		Start me at the newest message, and mark the channel read\n	": "最新のメッセージから始めて,チャネルを既読にする",
+    "\n		Start me at the newest message, but leave older messages unread\n	": "最新のメッセージから始めて,それ以前のメッセージは未読のままにしておく",
+    "Shortcuts": "ショートカット",
 
     // Main page - header
     "\n				Only paid teams can start calls from channels.\n			": "音声通話(有料版のみ)",
@@ -296,12 +307,17 @@
     "$1ユーザ名$4(チームのデフォルト)$5の代わりに本名$2(チームのデフォルト)$3を表示": /^\s*(<input(?:[^>]+)>\s*)Display real names (<span(?:[^>]+)>)\(team default\)(<\/span>) instead of usernames (<span(?:[^>]+)>)\(team default\)(<\/span>)\s*$/,
     "$1$2latinフォント$3を使用する$4アクセント付き文字を含む言語を使用する場合,フォントの外観が向上します. 有効にするにはリロードしてください.$5": /^\s*(<input(?:[^>]+)>\s*)Use font with (<a(?:[^>]+)>)extended latin character set(<\/a>)(<br>\s*<span(?:[^>]+)>)If you use a language with accented characters, this will improve font appearance. Requires reload to take effect.(<\/span>)\s*$/,
     "$1入力したエモーティコンを絵文字へ変換します. 例えば :D は $2": /^\s*(<input(?:[^>]+)>\s*)Convert my typed emoticons to emoji, so &nbsp;:D&nbsp; becomes (<span(?:[^>]+)><\/span>)\s*$/,
+    "$1 チームの外観をカスタマイズします. あなただけに適用されます.": /^Customize the look of the (<strong>[a-zA-Z0-9\.\-\_]+<\/strong>) team\. Only you will see this\.$/,
+    "$1$2を押すと<b>チャネルを既読</b>にします.": /^(<span(?:[^>]+)><\/span> )<b>Mark a channel as read<\/b> by hitting the( <em>Esc<\/em> )key\.$/,
+    "$1$2を押すと<b>全てを既読</b>にします.": /^(<span(?:[^>]+)><\/span> )<b>Mark everything as read<\/b> by pressing( <em>shift<\/em> \+ <em>esc<\/em>)\.$/,
+    "$1メッセージのメニューから$2を選択すると<b>メッセージを未読</b>にします. もしくは$3を押したままクリックしてください.": /^(<span(?:[^>]+)><\/span> )<b>Mark a message unread<\/b> by selecting( <em>Mark unread<\/em> )from the message's menu\. Or simply hold down the( <em>Alt<\/em> )key and click on it\.$/,
   };
 
   var placeholders = {
     "Search": "検索",
     "Search channels": "チャネル検索",
-    "Find or start a conversation": "検索 & チャット開始"
+    "Find or start a conversation": "検索 & チャット開始",
+    "Pick channels to exclude...": "除外するチャネルを選択..."
   };
 
   var titles = {
@@ -426,6 +442,7 @@
     for (var m = 0, mLength = result.snapshotLength; m < mLength; ++m) {
       translateDayDivider(result.snapshotItem(m));
     }
+
   };
 
   // ------------------ Do Translate --------------------------
