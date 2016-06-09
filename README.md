@@ -1,5 +1,6 @@
-# Japanize for Slack
+# [Japanize for Slack](https://addons.mozilla.org/ja/firefox/addon/japanizer-for-slack/)
 Slackのチームページを翻訳するFirefoxアドオンです
+
 
 ## 参考
 
