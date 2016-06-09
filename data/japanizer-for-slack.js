@@ -174,6 +174,22 @@
     "\n		Start me at the newest message, and mark the channel read\n	": "最新のメッセージから始めて,チャネルを既読にする",
     "\n		Start me at the newest message, but leave older messages unread\n	": "最新のメッセージから始めて,それ以前のメッセージは未読のままにしておく",
     "Shortcuts": "ショートカット",
+    "Input Options": "インプットオプション",
+    "\n		Enable spellcheck on your messages\n	": "メッセージのスペルチェックを有効にする",
+    "\n		Only show autocomplete for people when the '@' character is used\n	": "'@' を入力したらメンバーのオートコンプリートだけを表示する",
+    "\n		When typing code with ```, ": " ``` が入力された場合は、",
+    " should not send the message": " でメッセージを送信しない",
+    "With this checked use <em>Shift+Enter</em> to send": "チェックすると <em>Shift+Enter</em> で送信します",
+    "Channel List": "チャネルリスト",
+    "In the sidebar, show:": "サイドバーで次を表示:",
+    "All my channels and DMs": "全てのチャネルとダイレクトメッセージ",
+    "Just my unread channels and DMs": "未読のチャネルとダイレクトメッセージ",
+    "My unreads, along with everything I've starred": "未読とスターを付けたすべて",
+    "List private channels separately": "プライベートチャネルを分ける",
+    "Other Options": "その他のオプション",
+    "\n		Hide the quick switcher in the channel list\n	": "チャネルリストではクイックスイッチャを隠す",
+    "\n		Ask if I want to toggle my away status when I log in after having set myself away\n	": "不在に設定後ログインした際,不在状態を切り替えるか確認する",
+    "\n		Surprise me!\n	": "サプライズミー!",
 
     // Main page - header
     "\n				Only paid teams can start calls from channels.\n			": "音声通話(有料版のみ)",
@@ -311,6 +327,10 @@
     "$1$2を押すと<b>チャネルを既読</b>にします.": /^(<span(?:[^>]+)><\/span> )<b>Mark a channel as read<\/b> by hitting the( <em>Esc<\/em> )key\.$/,
     "$1$2を押すと<b>全てを既読</b>にします.": /^(<span(?:[^>]+)><\/span> )<b>Mark everything as read<\/b> by pressing( <em>shift<\/em> \+ <em>esc<\/em>)\.$/,
     "$1メッセージのメニューから$2を選択すると<b>メッセージを未読</b>にします. もしくは$3を押したままクリックしてください.": /^(<span(?:[^>]+)><\/span> )<b>Mark a message unread<\/b> by selecting( <em>Mark unread<\/em> )from the message's menu\. Or simply hold down the( <em>Alt<\/em> )key and click on it\.$/,
+    "$1あなたの入力した履歴を$2と$3で循環表示します$4これにチェックした場合,$5で最後のメッセージを編集します": /^\s*(<input(?:[^>]+)>\s*)Use( <i(?:[^>]+)><\/i> )and( <i(?:[^>]+)><\/i> )to cycle through your typed history(<br>\s*<span(?:[^>]+)>)With this checked, use Ctrl \+( <i(?:[^>]+)><\/i>&nbsp;&nbsp;)to edit your last message<\/span>\s*$/,
+    "$1$2, $3, $4, $5 キーは常にメッセージをスクロールする": /^\s*(<input(?:[^>]+)>\s*)(<em>Page up<\/em>), (<em>Page down<\/em>), (<em>Home<\/em>), and (<em>End<\/em>) keys always scroll messages\s*$/,
+    "$1Ctrl + F でSlackの検索を開始する$2$3標準のブラウザ検索を上書きます": /^\s*(<input(?:[^>]+)>\s*)Ctrl \+ F starts a Slack search(<br>)\s*(<span(?:[^>]+)>)Overrides normal browser search behavior(<\/span>)\s*$/,
+    "$1Ctrl + K でクイックスイッチャを起動する$2$3いくつかのブラウザの標準動作を上書きます": /^\s*(<input(?:[^>]+)>\s*)Ctrl \+ K starts the quick switcher(<br>)\s*(<span(?:[^>]+)>)Overrides normal behavior in some browsers(<\/span>)\s*$/,
   };
 
   var placeholders = {
