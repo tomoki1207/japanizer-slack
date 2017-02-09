@@ -1,17 +1,32 @@
 {
-  "title": "Japanizer for Slack",
-  "name": "japanizer-slack",
-  "version": "0.1.0",
-  "description": "Japanize Slack web site (team and its associated pages only).",
+  "name": "japanizer-for-slack",
+  "version": "0.7.0",
+  "description": "Translate to Japanese for your Slack team",
   "main": "index.js",
-  "author": "tomoki1207",
-  "engines": {
-    "firefox": ">=38.0a1",
-    "fennec": ">=38.0a1"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "web-ext run --no-reload",
+    "watch": "gulp watch"
   },
-  "license": "MIT",
   "keywords": [
-    "japanese",
+    "translate",
     "slack"
-  ]
+  ],
+  "author": "tomoki1207",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-babel": "^4.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0",
+    "web-ext": "^1.8.0"
+  },
+  "dependencies": {}
 }

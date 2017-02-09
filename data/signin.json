@@ -1,0 +1,32 @@
+{
+  "signin": {
+    "header": {
+      "product": "プロダクト",
+      "pricing": "価格",
+      "support": "サポート",
+      "download_slack": "SlackをDL",
+      "create_team": "チームを作成",
+      "find_team": "チームを作成",
+      "sign_in": "サインイン"
+    },
+    "content": {
+      "title": ["ようこそ ", "へ!"],
+      "title_tip": ["", " と ", "を入力"],
+      "title_tip_email": "メールアドレス",
+      "title_tip_password": "パスワード",
+      "signin_btn": "サインイン",
+      "remember": ["サインインしたままにする"],
+      "forgotpw": "パスワードを忘れた場合",
+      "create_account_tip": ["もしも", "のメールアドレスを持っているなら", "できます."],
+      "create_account": "アカウントを作成",
+      "create_team_tip": ["チーム作ってみたい?"],
+      "create_team": "チーム作成"
+    },
+    "error": {
+      "incorrect": ["メールアドレスかパスワードが間違っています"],
+      "ratelimit_tip": "間違えすぎです!",
+      "ratelimit": ["", "", "深呼吸して、しばらくしたらもう一度試してください"],
+      "unknown": ["何かが違うようです... もう一度試してください"]
+    }
+  }
+}

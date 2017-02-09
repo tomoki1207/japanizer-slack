@@ -1,0 +1,20 @@
+{
+    "env": {
+        "browser": true
+    },
+    "extends": "airbnb-base",
+    "plugins": [
+        "import",
+        "babel"
+    ],
+    "globals": {
+        "chrome": true
+    },
+    "rules": {
+        "semi": "error",
+        "quotes": ["error", "single"],
+        "no-param-reassign": ["error", {"props": false}],
+        "eol-last": "off",
+        "no-plusplus": "off"
+    }
+}

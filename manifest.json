@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "japanizer-for-slack",
+  "version": "0.7",
+  "description": "Translate to Japanese for your Slack team on Web",
+  "icons": {},
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.slack.com/*"
+      ],
+      "js": [
+        "lib/signin-translator.js"
+      ]
+    }
+  ]
+}
