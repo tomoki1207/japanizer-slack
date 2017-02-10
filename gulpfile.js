@@ -7,7 +7,12 @@ const source = require('vinyl-source-stream');
 const paths = {
   src: './scripts/',
   dist: './lib/',
-  files: ['translator-core.js', 'signin-translator.js'],
+  files: [
+    'translator-core.js',
+    'global-translator.js',
+    'signin-translator.js',
+    'signout-translator.js',
+  ],
 };
 
 gulp.task('watch', () => {

@@ -1,0 +1,13 @@
+{
+  "global": {
+    "header": {
+      "product": "プロダクト",
+      "pricing": "価格",
+      "support": "サポート",
+      "download_slack": "SlackをDL",
+      "create_team": "チームを作成",
+      "find_team": "チームを作成",
+      "sign_in": "サインイン"
+    }
+  }
+}

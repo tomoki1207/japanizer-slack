@@ -1,17 +1,11 @@
+import merge from 'merge';
 import { translate, setAttr } from './translator-core';
+import { setGlobalAttrs, getGlobalDefenition } from './global-translator';
 
 const json = require('../data/signin.json');
 
 function signin() {
-  const headerUl = document.querySelector('nav.persistent ul');
-  setAttr(headerUl.querySelector('a[data-qa="product"]'), 'signin.header.product');
-  setAttr(headerUl.querySelector('a[data-qa="pricing"]'), 'signin.header.pricing');
-  setAttr(headerUl.querySelector('a[data-qa="support"]'), 'signin.header.support');
-  setAttr(headerUl.querySelector('a[data-qa="download_slack"]'), 'signin.header.download_slack');
-  setAttr(headerUl.querySelector('a[data-qa="create_team"]'), 'signin.header.create_team');
-  setAttr(headerUl.querySelector('a[data-qa="find_team"]'), 'signin.header.find_team');
-  setAttr(headerUl.querySelector('a[data-qa="sign_in"]'), 'signin.header.sign_in');
-
+  setGlobalAttrs();
   setAttr(document.querySelector('#signin_header'), 'signin.content.title');
   const contentForm = document.querySelector('#page_contents div.signin_card form');
   setAttr(contentForm.querySelector('p.browser_password'), 'signin.content.title_tip');
@@ -31,7 +25,7 @@ function signin() {
   setAttr(document.querySelector('#error_ratelimit strong'), 'signin.error.ratelimit_tip');
   setAttr(document.querySelector('#error_unknown'), 'signin.error.unknown');
 
-  translate(json);
+  translate(merge(getGlobalDefenition(), json));
 }
 
 signin();

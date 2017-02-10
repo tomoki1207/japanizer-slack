@@ -1,0 +1,8 @@
+{
+  "signout": {
+    "content": {
+      "title": ["Slackからサインアウトしました"],
+      "sign_back_in": "サインインしなおす"
+    }
+  }
+}

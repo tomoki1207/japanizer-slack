@@ -11,7 +11,17 @@
       ],
       "js": [
         "lib/signin-translator.js"
-      ]
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://*.slack.com/signout/done"
+      ],
+      "js": [
+        "lib/signout-translator.js"
+      ],
+      "run_at": "document_end"
     }
   ]
 }
