@@ -7,7 +7,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.slack.com/*"
+        "https://*.slack.com/"
       ],
       "js": [
         "lib/signin-translator.js"
@@ -20,6 +20,15 @@
       ],
       "js": [
         "lib/signout-translator.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://*.slack.com/forgot"
+      ],
+      "js": [
+        "lib/forgot-translator.js"
       ],
       "run_at": "document_end"
     }

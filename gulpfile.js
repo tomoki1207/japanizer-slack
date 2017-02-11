@@ -12,6 +12,7 @@ const paths = {
     'global-translator.js',
     'signin-translator.js',
     'signout-translator.js',
+    'forgot-translator.js',
   ],
 };
 
