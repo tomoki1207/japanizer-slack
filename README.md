@@ -32,18 +32,25 @@ Slackのチームページを翻訳するFirefoxアドオンです
 
 その後は自動でコンパイル(トランスパイル)します
 
-### Firefoxでのデバッグ
+### デバッグ
 
 1. ソースをローカルへクローン
 1. プラグインのルートフォルダへ移動 (`cd japanizer-slack`)
 1. node.js と npm をインストール
 1. npm で 必要なライブラリ をインストール (`npm install`)
 1. `gulp watch` を起動
-1. about:debugging#addons へアクセス [詳細](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_first_WebExtension)
-   + アドオンのデバッグを有効化 にチェック
-   + 一時的なアドオンを読み込む で `manifest.json` を選択
-   + Slack へアクセス
-   + ソース変更後はブラウザをリロード
+1. ブラウザを開く
+  - Forefox
+    + about:debugging#addons へアクセス [詳細](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Your_first_WebExtension)
+    + アドオンのデバッグを有効化 にチェック
+    + 一時的なアドオンを読み込む で `manifest.json` を選択
+  - Chrome
+    + 設定 > その他のツール > 拡張機能 クリック [詳細](https://developer.chrome.com/extensions/getstarted#unpacked)
+    + デベロッパーモード にチェック
+    + パッケージ化されていない拡張機能を読み込む クリック
+    + プロジェクトのルートフォルダを選択
+1. Slack へアクセス
+1. ソース変更後はブラウザをリロード
 1. デバッグの終了
    + ブラウザを閉じる(?)
 

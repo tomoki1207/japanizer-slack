@@ -14,13 +14,13 @@ function getValue(obj, key) {
  * @param json - translation definition JSON object.
  */
 export function translate(json) {
-  Array.forEach(document.querySelectorAll('[data-translate]'), (node) => {
+  Array.prototype.forEach.call(document.querySelectorAll('[data-translate]'), (node) => {
     const word = getValue(json, node.getAttribute('data-translate'));
     if (node.children.length <= 0) {
       node.textContent = word;
     } else if (Array.isArray(word)) {
       let index = 0;
-      Array.forEach(node.childNodes, (child) => {
+      Array.prototype.forEach.call(node.childNodes, (child) => {
         if (child.nodeName === '#text') {
           child.textContent = word[index++];
         }
