@@ -17,7 +17,11 @@ export function translate(json) {
   Array.prototype.forEach.call(document.querySelectorAll('[data-translate]'), (node) => {
     const word = getValue(json, node.getAttribute('data-translate'));
     if (node.children.length <= 0) {
-      node.textContent = word;
+      if (Object.prototype.hasOwnProperty.call(word, 'reg')) {
+        node.textContent = node.textContent.replace(new RegExp(word.reg), word.text);
+      } else {
+        node.textContent = word;
+      }
     } else if (Array.isArray(word)) {
       let index = 0;
       Array.prototype.forEach.call(node.childNodes, (child) => {

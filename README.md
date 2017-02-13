@@ -21,6 +21,10 @@ Slackのチームページを翻訳するFirefoxアドオンです
   - `"path.to.bar": ["ふが", "ほげふが"]` ⇒ `<p>ほげ<strong>baz</strong>ほげふが</p>`
   - 子要素は別途定義
   - `"path.to.baz": "ぴよ"` ⇒ `<strong>ぴよ</strong>`
++ 動的にテキストが書き換わるDOM `<span>#general is here</span>`
+  - 値には`{reg, text}`のプロパティを持つObjectを設定
+  - 正規表現(`reg`)でキャプチャした部分を使用して文字列が置き換えられる
+  - `{"reg": "(#.+) is here", "text": "$1はここです"}` ⇒ `<span>#generalはここです</span>`
 
 ### コンパイル
 
