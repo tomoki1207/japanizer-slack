@@ -31,6 +31,15 @@
         "lib/forgot-translator.js"
       ],
       "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://*.slack.com/messages/*"
+      ],
+      "js": [
+        "lib/messages-translator.js"
+      ],
+      "run_at": "document_end"
     }
   ]
 }

@@ -26,6 +26,7 @@ export function translate(json) {
         }
       });
     }
+    node.removeAttribute('data-translate');
   });
 }
 
@@ -44,4 +45,17 @@ export function setAttr(elem, key) {
   if (elem) {
     elem.setAttribute('data-translate', key);
   }
+}
+
+/**
+ * Watch DOM chenges by MutationObserver.
+ * @param elem - target DOM element.
+ * @param cb - callback function for perform when detected DOM changes.
+ * @return observer objects. You can stop observing via it.
+ */
+export function observe(elem, cb, option) {
+  const config = option || { childList: true };
+  const observer = new MutationObserver(cb);
+  observer.observe(elem, config);
+  return observer;
 }

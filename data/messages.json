@@ -1,0 +1,21 @@
+{
+  "messages": {
+    "menu": {
+      "profile_n_account": "プロフィール設定",
+      "preferences": "表示設定",
+      "set_to": ["[", "]にする"],
+      "away": "不在",
+      "active": "アクティブ",
+      "help_n_feedback": "ヘルプ & フィードバック",
+      "invite_people": "メンバーの招待",
+      "manage_members": "メンバーの管理",
+      "team_settings": "チーム設定",
+      "apps_n_integrations": "Apps & インテグレーション",
+      "customize_slack": "Slackのカスタマイズ",
+      "statistics": "統計情報",
+      "billing": "支払情報",
+      "logout": ["ログアウト"],
+      "signin_to_another": "別のチームへサインイン"
+    }
+  }
+}
