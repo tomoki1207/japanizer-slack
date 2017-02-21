@@ -1,4 +1,4 @@
-import { translate, setAttr, observe } from './translator-core';
+import { translate, setAttr } from './translator-core';
 
 const json = require('../data/messages.json');
 
@@ -35,9 +35,51 @@ function translateChannelMenu(menu) {
   translate(json);
 }
 
+function translatePrefs(prefs) {
+  setAttr(prefs.querySelector('#fs_modal_header > h3'), 'messages.prefs.header');
+
+  // sidebar
+  const sidebar = prefs.querySelector('#fs_modal_sidebar');
+  setAttr(sidebar.querySelector('a[data-section="notifications"]'), 'messages.prefs.sidebar.notifications');
+  setAttr(sidebar.querySelector('a[data-section="messages_media"]'), 'messages.prefs.sidebar.messages_media');
+  setAttr(sidebar.querySelector('a[data-section="themes"]'), 'messages.prefs.sidebar.themes');
+  setAttr(sidebar.querySelector('a[data-section="search"]'), 'messages.prefs.sidebar.search');
+  setAttr(sidebar.querySelector('a[data-section="read_state_tracking"]'), 'messages.prefs.sidebar.read_state_tracking');
+  setAttr(sidebar.querySelector('a[data-section="a11y"]'), 'messages.prefs.sidebar.a11y');
+  setAttr(sidebar.querySelector('a[data-section="advanced"]'), 'messages.prefs.sidebar.advanced');
+
+  const setAttrToPrefsDetail = (contents) => {
+    const notifications = contents.querySelector('div#prefs_notifications');
+    if (notifications) {
+      setAttr(notifications.querySelector('h2.section_rollup_header'), 'messages.prefs.contents.notifications.settings.title');
+      setAttr(notifications.querySelector('p span:first-child strong'), 'messages.prefs.contents.notifications.settings.description.send_for');
+      setAttr(notifications.querySelector('p span:nth-child(2) strong'), 'messages.prefs.contents.notifications.settings.description.sound');
+      setAttr(notifications.querySelector('p span:last-child strong'), 'messages.prefs.contents.notifications.settings.description.display');
+      const dnd = contents.querySelector('div#prefs_dnd');
+      setAttr(dnd.querySelector('h2.section_rollup_header'), 'messages.prefs.contents.notifications.dnd.title');
+      setAttr(dnd.querySelector('p > span:first-child strong'), 'messages.prefs.contents.notifications.dnd.description.disabled');
+    }
+  };
+
+  // contents
+  const contents = prefs.querySelector('div.contents');
+  setAttrToPrefsDetail(contents);
+  translate(json);
+
+  const config = { childList: true, subtree: true, characterData: true };
+  const observer = new MutationObserver((_, obs) => {
+    obs.disconnect();
+    setAttrToPrefsDetail(contents);
+    translate(json);
+    obs.observe(contents, config);
+  });
+  observer.observe(contents, config);
+  return observer;
+}
+
 function init() {
   // watch menu panel
-  observe(document.querySelector('#client-ui'), (mutations, observer) => {
+  new MutationObserver(() => {
     const teamMenu = document.querySelector('#menu.team_menu');
     if (teamMenu) {
       return translateTeamMenu(teamMenu);
@@ -47,7 +89,19 @@ function init() {
       return translateChannelMenu(channelMenu);
     }
     return false;
-  });
+  }).observe(document.querySelector('#client-ui'), { childList: true });
+
+  // watch preference panel
+  const childObservers = {};
+  new MutationObserver(() => {
+    const prefs = document.querySelector('#fs_modal.prefs_modal');
+    if (prefs && !childObservers.prefs) {
+      childObservers.prefs = translatePrefs(prefs);
+    } else if (!prefs && childObservers.prefs) {
+      childObservers.prefs.disconnect();
+      childObservers.prefs = null;
+    }
+  }).observe(document.querySelector('body'), { childList: true });
 }
 
 init();

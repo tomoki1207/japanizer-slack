@@ -25,6 +25,54 @@
       "prefs": "通知設定",
       "mute": {"reg": "Mute (#.+)", "text":"$1をミュート"},
       "add_service": "Appまたはインテグレーション を追加"
+    },
+    "prefs": {
+      "header": {"reg": "Your preferences for (\\w+)", "text": "$1 設定"},
+      "sidebar": {
+        "notifications": "通知",
+        "messages_media": "メッセージ & メディア",
+        "themes": "サイドバーテーマ",
+        "search": "検索",
+        "read_state_tracking": "既読",
+        "a11y": "アクセシビリティ",
+        "advanced": "上級者向け"
+      },
+      "contents": {
+        "notifications": {
+          "settings":{
+            "title": ["通知設定"],
+            "description": {
+              "send_for": "次の場合に通知する: ",
+              "sound": "サウンド: ",
+              "display": "表示内容: "
+            }
+          },
+          "dnd": {
+            "title": ["通知しない時間帯"],
+            "description": {
+              "disabled": "次の時間は通知しない: "
+            }
+          }
+        },
+        "messages_media": {
+
+        },
+        "themes": {
+
+        },
+        "search": {
+
+        },
+        "read_state_tracking": {
+
+        },
+        "a11y": {
+
+        },
+        "advanced": {
+
+        }
+      }
     }
   }
 }
