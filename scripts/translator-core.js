@@ -9,6 +9,14 @@ function getValue(obj, key) {
   return val;
 }
 
+function replaceToTranslatedWord(node, word) {
+  if (Object.prototype.hasOwnProperty.call(word, 'reg')) {
+    node.textContent = node.textContent.replace(new RegExp(word.reg), word.text);
+  } else {
+    node.textContent = word;
+  }
+}
+
 /**
  * Translating.
  * @param json - translation definition JSON object.
@@ -17,16 +25,12 @@ export function translate(json) {
   Array.prototype.forEach.call(document.querySelectorAll('[data-translate]'), (node) => {
     const word = getValue(json, node.getAttribute('data-translate'));
     if (node.children.length <= 0) {
-      if (Object.prototype.hasOwnProperty.call(word, 'reg')) {
-        node.textContent = node.textContent.replace(new RegExp(word.reg), word.text);
-      } else {
-        node.textContent = word;
-      }
+      replaceToTranslatedWord(node, word);
     } else if (Array.isArray(word)) {
       let index = 0;
       Array.prototype.forEach.call(node.childNodes, (child) => {
         if (child.nodeName === '#text') {
-          child.textContent = word[index++];
+          replaceToTranslatedWord(child, word[index++] || '');
         }
       });
     }

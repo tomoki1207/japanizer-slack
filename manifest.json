@@ -34,6 +34,7 @@
     },
     {
       "matches": [
+        "https://*.slack.com/messages",
         "https://*.slack.com/messages/*"
       ],
       "js": [

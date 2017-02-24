@@ -53,11 +53,66 @@ function translatePrefs(prefs) {
     if (notifications) {
       setAttr(notifications.querySelector('h2.section_rollup_header'), 'messages.prefs.contents.notifications.settings.title');
       setAttr(notifications.querySelector('p span:first-child strong'), 'messages.prefs.contents.notifications.settings.description.send_for');
+      const sendFor = notifications.querySelector('p span:first-child');
+      if (sendFor.textContent.includes('All activity')) {
+        setAttr(sendFor, 'messages.prefs.contents.notifications.settings.description.send_all');
+      } else if (sendFor.textContent.includes('Direct messages and highlight words')) {
+        setAttr(sendFor, 'messages.prefs.contents.notifications.settings.description.send_dm');
+      } else if (sendFor.textContent.includes('Nothing')) {
+        setAttr(sendFor, 'messages.prefs.contents.notifications.settings.description.send_off');
+      }
       setAttr(notifications.querySelector('p span:nth-child(2) strong'), 'messages.prefs.contents.notifications.settings.description.sound');
+      const sound = notifications.querySelector('p span:nth-child(2)');
+      if (sound.textContent.includes('Off (muted)')) {
+        setAttr(sound, 'messages.prefs.contents.notifications.settings.description.sound_mute');
+      }
       setAttr(notifications.querySelector('p span:last-child strong'), 'messages.prefs.contents.notifications.settings.description.display');
+      const display = notifications.querySelector('p span:last-child');
+      if (display.textContent.includes('Show text')) {
+        setAttr(display, 'messages.prefs.contents.notifications.settings.description.display_show');
+      } else if (display.textContent.includes('Hide text')) {
+        setAttr(display, 'messages.prefs.contents.notifications.settings.description.display_hide');
+      }
+      const allowedDiv = notifications.querySelector('div#growls_allowed_div');
+      setAttr(allowedDiv.querySelector('#prefs_send_notifications_for'), 'messages.prefs.contents.notifications.settings.allowed.caption');
+      setAttr(allowedDiv.querySelector('p > label:first-child'), 'messages.prefs.contents.notifications.settings.allowed.all');
+      setAttr(allowedDiv.querySelector('p > label:nth-child(2)'), 'messages.prefs.contents.notifications.settings.allowed.specify');
+      setAttr(allowedDiv.querySelector('p > label:nth-child(2) > span'), 'messages.prefs.contents.notifications.settings.allowed.recommended');
+      setAttr(allowedDiv.querySelector('p > label:last-child'), 'messages.prefs.contents.notifications.settings.allowed.none');
+      setAttr(allowedDiv.querySelector('p > label:last-child > span'), 'messages.prefs.contents.notifications.settings.allowed.off');
+      setAttr(allowedDiv.querySelector('#no_non_default'), 'messages.prefs.contents.notifications.settings.allowed.default.help');
+      setAttr(allowedDiv.querySelector('#no_non_default > em'), 'messages.prefs.contents.notifications.settings.allowed.default.help_cnp');
+      setAttr(allowedDiv.querySelector('#no_non_default > a'), 'messages.prefs.contents.notifications.settings.allowed.default.help_link');
+      setAttr(allowedDiv.querySelector('#no_non_default + p'), 'messages.prefs.contents.notifications.settings.allowed.non_default.help');
+      setAttr(allowedDiv.querySelector('#no_non_default + p > strong'), 'messages.prefs.contents.notifications.settings.allowed.non_default.help_dns');
+      setAttr(allowedDiv.querySelector('#no_non_default + p > a'), 'messages.prefs.contents.notifications.settings.allowed.non_default.help_link');
+      const subPrefs = contents.querySelectorAll('div#prefs_notifications > div > h4');
+      setAttr(notifications.querySelector('#prefs_sounds'), 'messages.prefs.contents.notifications.settings.sounds.caption');
+      setAttr(notifications.querySelector('span#prefs_mute_all_sounds_label'), 'messages.prefs.contents.notifications.settings.sounds.mute');
+      setAttr(notifications.querySelector('span#prefs_mute_all_sounds_label ~ span'), 'messages.prefs.contents.notifications.settings.sounds.mute_tip');
+      setAttr(subPrefs[1], 'messages.prefs.contents.notifications.settings.display.caption');
+      setAttr(notifications.querySelector('span#prefs_show_message_text_label'), 'messages.prefs.contents.notifications.settings.display.show_text');
+      setAttr(notifications.querySelector('span#prefs_show_message_text_label ~ span'), 'messages.prefs.contents.notifications.settings.display.show_text_tip');
+      setAttr(subPrefs[2], 'messages.prefs.contents.notifications.settings.threads.caption');
+      setAttr(notifications.querySelector('span#prefs_threads_everything_label'), 'messages.prefs.contents.notifications.settings.threads.everything');
+      setAttr(notifications.querySelector('span#prefs_threads_everything_label ~ span'), 'messages.prefs.contents.notifications.settings.threads.everything_tip');
+      setAttr(notifications.querySelector('#growls_test'), 'messages.prefs.contents.notifications.settings.test');
+      setAttr(notifications.querySelector('#prefs_highlight_words'), 'messages.prefs.contents.notifications.settings.hilight.caption');
+      setAttr(notifications.querySelector('#prefs_highlight_words + label.normal'), 'messages.prefs.contents.notifications.settings.hilight.help');
       const dnd = contents.querySelector('div#prefs_dnd');
       setAttr(dnd.querySelector('h2.section_rollup_header'), 'messages.prefs.contents.notifications.dnd.title');
-      setAttr(dnd.querySelector('p > span:first-child strong'), 'messages.prefs.contents.notifications.dnd.description.disabled');
+      const disturb = dnd.querySelector('p > span:first-child');
+      if (disturb.textContent.includes('Do Not Disturb is not enabled.')) {
+        setAttr(disturb, 'messages.prefs.contents.notifications.dnd.description.disabled');
+      } else {
+        setAttr(disturb.querySelector('strong'), 'messages.prefs.contents.notifications.dnd.description.enabled');
+        setAttr(disturb.querySelector('span'), 'messages.prefs.contents.notifications.dnd.description.jst');
+        setAttr(disturb, 'messages.prefs.contents.notifications.dnd.description.timerange');
+      }
+      setAttr(contents.querySelector('div#prefs_dnd > div > p'), 'messages.prefs.contents.notifications.dnd.help');
+      setAttr(contents.querySelector('#prefs_dnd_checkbox_label'), 'messages.prefs.contents.notifications.dnd.auto_disable_from');
+      setAttr(contents.querySelector('div#prefs_dnd > div > span'), 'messages.prefs.contents.notifications.dnd.to');
+      setAttr(contents.querySelector('div#prefs_dnd > div > span:last-child > span'), 'messages.prefs.contents.notifications.dnd.jst');
     }
   };
 
