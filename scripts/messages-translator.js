@@ -113,6 +113,46 @@ function translatePrefs(prefs) {
       setAttr(contents.querySelector('#prefs_dnd_checkbox_label'), 'messages.prefs.contents.notifications.dnd.auto_disable_from');
       setAttr(contents.querySelector('div#prefs_dnd > div > span'), 'messages.prefs.contents.notifications.dnd.to');
       setAttr(contents.querySelector('div#prefs_dnd > div > span:last-child > span'), 'messages.prefs.contents.notifications.dnd.jst');
+      return;
+    }
+    if (contents.querySelector('#prefs_message_theme')) {
+      setAttr(contents.querySelector('h2'), 'messages.prefs.contents.messages_media.display.title');
+      setAttr(contents.querySelector('#prefs_message_theme'), 'messages.prefs.contents.messages_media.display.theme.caption');
+      const theme = contents.querySelector('#prefs_message_theme ~ div div.col:first-child');
+      setAttr(theme.querySelector('label:first-child'), 'messages.prefs.contents.messages_media.display.theme.clean');
+      setAttr(theme.querySelector('label:first-child > span'), 'messages.prefs.contents.messages_media.display.theme.clean_tip');
+      setAttr(theme.querySelector('label:last-child'), 'messages.prefs.contents.messages_media.display.theme.compact');
+      setAttr(theme.querySelector('label:last-child > span'), 'messages.prefs.contents.messages_media.display.theme.compact_tip');
+      setAttr(contents.querySelector('#prefs_display_options'), 'messages.prefs.contents.messages_media.display.options.caption');
+      const opts = contents.querySelector('#prefs_display_options ~ p');
+      setAttr(opts.querySelector('label:first-child'), 'messages.prefs.contents.messages_media.display.options.typing');
+      setAttr(opts.querySelector('label:nth-child(2)'), 'messages.prefs.contents.messages_media.display.options.real_name');
+      setAttr(opts.querySelector('#display_real_names_default'), 'messages.prefs.contents.messages_media.display.options.real_name_default');
+      setAttr(opts.querySelector('#display_usernames_default'), 'messages.prefs.contents.messages_media.display.options.real_name_default');
+      setAttr(opts.querySelector('label:nth-child(3)'), 'messages.prefs.contents.messages_media.display.options.time24');
+      setAttr(opts.querySelector('label:nth-child(3) > span'), 'messages.prefs.contents.messages_media.display.options.time24_tip');
+      setAttr(opts.querySelector('label:nth-child(4)'), 'messages.prefs.contents.messages_media.display.options.hex');
+      setAttr(opts.querySelector('label:nth-child(5)'), 'messages.prefs.contents.messages_media.display.options.lato');
+      setAttr(opts.querySelector('label:nth-child(5) > a'), 'messages.prefs.contents.messages_media.display.options.lato_link');
+      setAttr(opts.querySelector('label:nth-child(5) > span'), 'messages.prefs.contents.messages_media.display.options.lato_help');
+      setAttr(contents.querySelector('#prefs_emoji_style'), 'messages.prefs.contents.messages_media.display.emoji.caption');
+      const emoji = contents.querySelector('#prefs_emoji');
+      setAttr(emoji.querySelector('label:first-child > span'), 'messages.prefs.contents.messages_media.display.emoji.apple');
+      setAttr(emoji.querySelector('label:nth-child(2) > span'), 'messages.prefs.contents.messages_media.display.emoji.google');
+      setAttr(emoji.querySelector('label:nth-child(3) > span'), 'messages.prefs.contents.messages_media.display.emoji.twitter');
+      setAttr(emoji.querySelector('label:nth-child(4) > span'), 'messages.prefs.contents.messages_media.display.emoji.one');
+      setAttr(emoji.querySelector('label:nth-child(5)'), 'messages.prefs.contents.messages_media.display.emoji.none_tip');
+      setAttr(emoji.querySelector('label:nth-child(5) > span'), 'messages.prefs.contents.messages_media.display.emoji.none_tip');
+      setAttr(contents.querySelector('#jumbomoji_pref > label'), 'messages.prefs.contents.messages_media.display.emoji.jumbomoji');
+      setAttr(contents.querySelector('#jumbomoji_pref > label > span'), 'messages.prefs.contents.messages_media.display.emoji.jumbomoji_help');
+      setAttr(contents.querySelector('#prefs_convert_emoticons'), 'messages.prefs.contents.messages_media.display.emoticons.caption');
+      setAttr(contents.querySelector('#prefs_convert_emoticons ~ p label.checkbox'), 'messages.prefs.contents.messages_media.display.emoticons.convert');
+      setAttr(contents.querySelector('#prefs_inline_media'), 'messages.prefs.contents.messages_media.media_links.title');
+      const links = contents.querySelector('#prefs_inline_media ~ p');
+      setAttr(links.querySelector('label:first-child'), 'messages.prefs.contents.messages_media.media_links.expand_internal');
+      setAttr(links.querySelector('label:nth-child(2)'), 'messages.prefs.contents.messages_media.media_links.expand_inline');
+      setAttr(links.querySelector('label:nth-child(3)'), 'messages.prefs.contents.messages_media.media_links.dont_obey');
+      setAttr(links.querySelector('label:nth-child(4)'), 'messages.prefs.contents.messages_media.media_links.expand_non_media');
     }
   };
 

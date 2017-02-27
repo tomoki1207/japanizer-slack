@@ -106,7 +106,50 @@
           }
         },
         "messages_media": {
-
+          "display":{
+            "title": "メッセージ表示",
+            "theme": {
+              "caption": "メッセージテーマ",
+              "clean": ["", "クリーン: "],
+              "clean_tip": "クリアでフレンドリー,メッセージにフォーカスできます",
+              "compact": ["", "コンパクト: "],
+              "compact_tip": "一度にたくさんのメッセージが見られます"
+            },
+            "options": {
+              "caption": "オプション",
+              "typing": ["", "メッセージを誰が入力中か表示する"],
+              "real_name": ["", "アカウント名", "の代わりに本名", "を表示する"],
+              "real_name_default": "(デフォルト)",
+              "time24": ["", "24時間表示"],
+              "time24_tip": "4:00 PM でなく 16:00",
+              "hex": ["", "16進数値の後に色見本を表示する"],
+              "lato": [""],
+              "lato_link":  "Latinの拡張文字セットを使用する",
+              "lato_help": "アクセント付き文字を使用している場合,表示が改善されます.リロード後に反映されます."
+            },
+            "emoji": {
+              "caption": "絵文字スタイル",
+              "apple": "Apple/インターナショナル スタイル",
+              "google": "Google ハングアウト スタイル",
+              "twitter": "Twitter スタイル",
+              "one": "Emoji One スタイル",
+              "none": ["", "なし"],
+              "none_tip": "プレーンテキストのみ",
+              "jumbomoji": ["", "JUMBOMOJIを表示"],
+              "jumbomoji_help": "テキストなしのメッセージで大きな絵文字を表示します"
+            },
+            "emoticons": {
+              "caption": "エモーティコン",
+              "convert": ["", "入力したエモーティコンを絵文字に変換します.( :D → ", " )"]
+            }
+          },
+          "media_links": {
+            "title": "インラインメディア & リンク",
+            "expand_internal": ["", "画像とファイルをメッセージ内に展開する"],
+            "expand_inline": ["", "リンクされたWebサイトの画像をメッセージ内に展開する"],
+            "dont_obey": ["", "2MB以上でも展開しちゃう"],
+            "expand_non_media": ["", "リンクされたWebサイトのプレビューテキストをメッセージ内に展開する"]
+          }
         },
         "themes": {
 
