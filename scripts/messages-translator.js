@@ -153,6 +153,24 @@ function translatePrefs(prefs) {
       setAttr(links.querySelector('label:nth-child(2)'), 'messages.prefs.contents.messages_media.media_links.expand_inline');
       setAttr(links.querySelector('label:nth-child(3)'), 'messages.prefs.contents.messages_media.media_links.dont_obey');
       setAttr(links.querySelector('label:nth-child(4)'), 'messages.prefs.contents.messages_media.media_links.expand_non_media');
+      return;
+    }
+    if (contents.querySelector('#prefs_themes')) {
+      setAttr(contents.querySelector('#prefs_sidebar_theme'), 'messages.prefs.contents.sidebar_theme.title');
+      setAttr(contents.querySelector('#prefs_sidebar_theme ~ p'), 'messages.prefs.contents.sidebar_theme.help');
+      setAttr(contents.querySelector('#customize_theme_info'), 'messages.prefs.contents.sidebar_theme.custom.info');
+      setAttr(contents.querySelector('#customize_theme_info > a'), 'messages.prefs.contents.sidebar_theme.custom.info_toggle');
+      const custom = contents.querySelector('#prefs_themes_customize');
+      setAttr(custom.querySelector('h4'), 'messages.prefs.contents.sidebar_theme.custom.caption');
+      setAttr(custom.querySelector('label:nth-child(2)'), 'messages.prefs.contents.sidebar_theme.custom.col_bg');
+      setAttr(custom.querySelector('label:nth-child(3)'), 'messages.prefs.contents.sidebar_theme.custom.menu_bg_hover');
+      setAttr(custom.querySelector('label:nth-child(4)'), 'messages.prefs.contents.sidebar_theme.custom.act_item');
+      setAttr(custom.querySelector('label:nth-child(5)'), 'messages.prefs.contents.sidebar_theme.custom.act_item_txt');
+      setAttr(custom.querySelector('label:nth-child(6)'), 'messages.prefs.contents.sidebar_theme.custom.hover_item');
+      setAttr(custom.querySelector('label:nth-child(7)'), 'messages.prefs.contents.sidebar_theme.custom.txt');
+      setAttr(custom.querySelector('label:nth-child(8)'), 'messages.prefs.contents.sidebar_theme.custom.act_pres');
+      setAttr(custom.querySelector('label:nth-child(9)'), 'messages.prefs.contents.sidebar_theme.custom.ment_bdg');
+      setAttr(custom.querySelector('label:last-child'), 'messages.prefs.contents.sidebar_theme.custom.share');
     }
   };
 
