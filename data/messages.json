@@ -1,5 +1,15 @@
 {
   "messages": {
+    "banner": {
+      "notifications": ["", "をしてください"],
+      "notifications_link": "デスクトップ通知の許可",
+      "notifications_dismiss": {
+        "caption": ["Slackを使用するならデスクトップ通知がおすすめです "],
+        "enabled": "通知を有効にする",
+        "ask_later": "また今度",
+        "never": "このPCでは有効にしない"
+      }
+    },
     "team_menu": {
       "account": "プロフィール設定",
       "prefs": "表示設定",
@@ -23,11 +33,49 @@
       "details": "チャネル詳細を表示",
       "advanced": "追加設定",
       "prefs": "通知設定",
-      "mute": {"reg": "Mute (#.+)", "text":"$1をミュート"},
+      "mute": { "reg": "Mute (#.+)", "text":"$1をミュート" },
       "add_service": "Appまたはインテグレーション を追加"
     },
+    "channel_prefs": {
+      "header": { "reg": "Notification Preferences: #(\\w+)", "text": "通知設定: #$1" },
+      "disable_notify": {
+        "caption": ["デスクトップ通知"],
+        "not_yet_allowd": ["デスクトップ通知がまだ許可されていません. ", "で変更できます."],
+        "not_yet_allowd_link": "設定ダイアログ",
+        "not_enabled": ["デスクトップ通知が無効にされています. ", "で変更できます."],
+        "not_enabled_link": "設定ダイアログ",
+        "not_allowed": "ブラウザ設定で通知が許可されていません. ブラウザの設定を変更する必要があります.",
+        "impossible": ["このブラウザではデスクトップ通知がサポートされていません. "],
+        "impossible_link": "Slackのアプリを使ってみますか?"
+      },
+      "settings": {
+        "any": ["", "全てのアクティビティ"],
+        "mentions": ["", "メンションとハイライトワードのみ"],
+        "none": ["", "なし"],
+        "default": "(デフォルト)"
+      },
+      "desktop": {
+        "caption": ["デスクトップ通知"]
+      },
+      "mobile": {
+        "caption": ["モバイルプッシュ通知"]
+      },
+      "suppressed": {
+        "caption": "@everyone による通知",
+        "mute": ["", "", "と", "での通知はミュートする"],
+        "on_mobile": "(モバイルのみ)",
+        "on_desktop": "(デスクトップのみ)"
+      },
+      "mute": {
+        "caption": ["", "このチャネルをミュートする"],
+        "help": "このチャネルからの通知をミュートし, メンションのないメッセージは未読として表示しません"
+      },
+      "more": ["デフォルトの通知設定を変える場合は "],
+      "more_link": "アカウント設定",
+      "done": "完了"
+    },
     "prefs": {
-      "header": {"reg": "Your preferences for (\\w+)", "text": "$1 設定"},
+      "header": { "reg": "Your preferences for (\\w+)", "text": "$1 設定" },
       "sidebar": {
         "notifications": "通知",
         "messages_media": "メッセージ & メディア",
@@ -51,6 +99,25 @@
               "display": "表示内容: ",
               "display_show": ["", "メッセージ表示"],
               "display_hide": ["", "メッセージ非表示"]
+            },
+            "permission": {
+              "caption": "デスクトップ通知が無効になっています",
+              "help": "チームの重要なアクティビティを知るために,デスクトップ通知を有効にすることをおすすめします.",
+              "enable": ["デスクトップ通知を有効にする"]
+            },
+            "instructions": {
+              "caption": "デスクトップ通知",
+              "help": ["クリックしてブラウザのポップアップ通知を", "してください"],
+              "allow": "許可"
+            },
+            "disallowed": {
+              "caption": "デスクトップ通知が無効になっています",
+              "help": ["ブラウザ設定で通知が許可されていません. ブラウザの設定を変更する必要があります."]
+            },
+            "impossible": {
+              "caption": "デスクトップ通知が無効になっています",
+              "help": ["このブラウザではデスクトップ通知がサポートされていません."],
+              "help_link": "Slackアプリをお試しください"
             },
             "allowed": {
               "caption": "通知内容:",

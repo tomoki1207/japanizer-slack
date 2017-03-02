@@ -35,6 +35,43 @@ function translateChannelMenu(menu) {
   translate(json);
 }
 
+function translateChannelPrefsDialog(dialog) {
+  setAttr(dialog.querySelector('div.modal-header h3'), 'messages.channel_prefs.header');
+  setAttr(dialog.querySelector('#notifications_not_working p:first-child'), 'messages.channel_prefs.disable_notify.caption');
+  setAttr(dialog.querySelector('#notifications_not_yet_allowed'), 'messages.channel_prefs.disable_notify.not_yet_allowd');
+  setAttr(dialog.querySelector('#notifications_not_yet_allowed > a'), 'messages.channel_prefs.disable_notify.not_yet_allowd_link');
+  setAttr(dialog.querySelector('#notifications_not_enabled'), 'messages.channel_prefs.disable_notify.not_enabled');
+  setAttr(dialog.querySelector('#notifications_not_enabled > a'), 'messages.channel_prefs.disable_notify.not_enabled_link');
+  setAttr(dialog.querySelector('#notifications_not_allowed'), 'messages.channel_prefs.disable_notify.not_allowed');
+  setAttr(dialog.querySelector('#notifications_impossible'), 'messages.channel_prefs.disable_notify.impossible');
+  setAttr(dialog.querySelector('#notifications_impossible > a'), 'messages.channel_prefs.disable_notify.impossible_link');
+  setAttr(dialog.querySelector('#notifications_working p:first-child'), 'messages.channel_prefs.desktop.caption');
+  setAttr(dialog.querySelector('#notifications_working p:last-child > label:first-child'), 'messages.channel_prefs.settings.any');
+  setAttr(dialog.querySelector('#notifications_working p:last-child > label:nth-child(2)'), 'messages.channel_prefs.settings.mentions');
+  setAttr(dialog.querySelector('#notifications_working p:last-child > label:last-child'), 'messages.channel_prefs.settings.none');
+  setAttr(dialog.querySelector('#all_everything_default'), 'messages.channel_prefs.settings.default');
+  setAttr(dialog.querySelector('#all_mentions_default'), 'messages.channel_prefs.settings.default');
+  setAttr(dialog.querySelector('#all_nothing_default'), 'messages.channel_prefs.settings.default');
+  setAttr(dialog.querySelector('#non_muting_prefs > p:nth-child(2)'), 'messages.channel_prefs.mobile.caption');
+  setAttr(dialog.querySelector('#non_muting_prefs > p:nth-child(3) > label:first-child'), 'messages.channel_prefs.settings.any');
+  setAttr(dialog.querySelector('#non_muting_prefs > p:nth-child(3) > label:nth-child(2)'), 'messages.channel_prefs.settings.mentions');
+  setAttr(dialog.querySelector('#non_muting_prefs > p:nth-child(3) > label:last-child'), 'messages.channel_prefs.settings.none');
+  setAttr(dialog.querySelector('#all_push_everything_default'), 'messages.channel_prefs.settings.default');
+  setAttr(dialog.querySelector('#all_push_mentions_default'), 'messages.channel_prefs.settings.default');
+  setAttr(dialog.querySelector('#all_push_nothing_default'), 'messages.channel_prefs.settings.default');
+  setAttr(dialog.querySelector('#single_suppressed_div > p:first-child'), 'messages.channel_prefs.suppressed.caption');
+  setAttr(dialog.querySelector('#single_suppressed_div > p:last-child > label'), 'messages.channel_prefs.suppressed.mute');
+  setAttr(dialog.querySelector('#single_suppressed_mobile_qualifier'), 'messages.channel_prefs.suppressed.on_mobile');
+  setAttr(dialog.querySelector('#single_suppressed_desktop_qualifier'), 'messages.channel_prefs.suppressed.on_desktop');
+  const mute = dialog.querySelector('#muting_div');
+  setAttr(mute.querySelector('p:first-child > label'), 'messages.channel_prefs.mute.caption');
+  setAttr(mute.querySelector('p:last-child'), 'messages.channel_prefs.mute.help');
+  setAttr(dialog.querySelector('div.modal-footer > p'), 'messages.channel_prefs.more');
+  setAttr(dialog.querySelector('div.modal-footer > p > a'), 'messages.channel_prefs.more_link');
+  setAttr(dialog.querySelector('div.modal-footer > a.btn'), 'messages.channel_prefs.done');
+  translate(json);
+}
+
 function setAttrToPrefsDetail(contents) {
   const notifications = contents.querySelector('div#prefs_notifications');
   if (notifications) {
@@ -60,6 +97,21 @@ function setAttrToPrefsDetail(contents) {
     } else if (display.textContent.includes('Hide text')) {
       setAttr(display, 'messages.prefs.contents.notifications.settings.description.display_hide');
     }
+    const permissionDiv = notifications.querySelector('div#growls_permission_div');
+    setAttr(permissionDiv.querySelector('h4'), 'messages.prefs.contents.notifications.settings.permission.caption');
+    setAttr(permissionDiv.querySelector('p'), 'messages.prefs.contents.notifications.settings.permission.help');
+    setAttr(permissionDiv.querySelector('#growls_permission_link'), 'messages.prefs.contents.notifications.settings.permission.enable');
+    const instructionDiv = notifications.querySelector('div#growls_instructions_div');
+    setAttr(instructionDiv.querySelector('h4'), 'messages.prefs.contents.notifications.settings.instructions.caption');
+    setAttr(instructionDiv.querySelector('p'), 'messages.prefs.contents.notifications.settings.instructions.help');
+    setAttr(instructionDiv.querySelector('p > strong'), 'messages.prefs.contents.notifications.settings.instructions.allow');
+    const disallowdDiv = notifications.querySelector('div#growls_disallowed_div');
+    setAttr(disallowdDiv.querySelector('h4'), 'messages.prefs.contents.notifications.settings.disallowed.caption');
+    setAttr(disallowdDiv.querySelector('p'), 'messages.prefs.contents.notifications.settings.disallowed.help');
+    const impossibleDiv = notifications.querySelector('div#growls_impossible_div');
+    setAttr(impossibleDiv.querySelector('h4'), 'messages.prefs.contents.notifications.settings.impossible.caption');
+    setAttr(impossibleDiv.querySelector('p'), 'messages.prefs.contents.notifications.settings.impossible.help');
+    setAttr(impossibleDiv.querySelector('p > a'), 'messages.prefs.contents.notifications.settings.impossible.help_link');
     const allowedDiv = notifications.querySelector('div#growls_allowed_div');
     setAttr(allowedDiv.querySelector('#prefs_send_notifications_for'), 'messages.prefs.contents.notifications.settings.allowed.caption');
     setAttr(allowedDiv.querySelector('p > label:first-child'), 'messages.prefs.contents.notifications.settings.allowed.all');
@@ -221,17 +273,32 @@ function translatePrefs(prefs) {
 }
 
 function init() {
+  // translate static contents
+  setAttr(document.querySelector('#notifications_banner'), 'messages.banner.notifications');
+  setAttr(document.querySelector('#notifications_banner > a'), 'messages.banner.notifications_link');
+  setAttr(document.querySelector('#notifications_dismiss_banner'), 'messages.banner.notifications_dismiss.caption');
+  setAttr(document.querySelector('#notifications_dismiss_banner > span > a:first-child'), 'messages.banner.notifications_dismiss.enabled');
+  setAttr(document.querySelector('#notifications_dismiss_banner > span > a:nth-child(2)'), 'messages.banner.notifications_dismiss.ask_later');
+  setAttr(document.querySelector('#notifications_dismiss_banner > span > a:last-child'), 'messages.banner.notifications_dismiss.never');
+
+  translate(json);
+
   // watch menu panel
   new MutationObserver(() => {
     const teamMenu = document.querySelector('#menu.team_menu');
     if (teamMenu) {
-      return translateTeamMenu(teamMenu);
+      translateTeamMenu(teamMenu);
+      return;
     }
     const channelMenu = document.querySelector('#menu[data-qa="channel_menu"]');
     if (channelMenu) {
-      return translateChannelMenu(channelMenu);
+      translateChannelMenu(channelMenu);
+      return;
     }
-    return false;
+    const channelPref = document.querySelector('#channel_prefs_dialog');
+    if (channelPref) {
+      translateChannelPrefsDialog(channelPref);
+    }
   }).observe(document.querySelector('#client-ui'), { childList: true });
 
   // watch preference panel
