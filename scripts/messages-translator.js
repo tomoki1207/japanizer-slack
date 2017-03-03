@@ -2,6 +2,32 @@ import { translate, setAttr } from './translator-core';
 
 const json = require('../data/messages.json');
 
+function translateNotifyMenu(menu) {
+  setAttr(menu.querySelector('div.section_header > span.header_label'), 'messages.menu_items.snooze.header');
+  setAttr(menu.querySelector('#adjust_dnd_schedule > a'), 'messages.menu_items.dnd');
+  setAttr(menu.querySelector('#channel_notification_settings > a'), 'messages.menu_items.channel_notifications');
+  setAttr(menu.querySelector('#notification_settings > a'), 'messages.menu_items.notifications');
+
+  translate(json);
+}
+
+function translateMessageMenu(menu) {
+  setAttr(menu.querySelector('#toggle-subscription-status span.unfollow_thread'), 'messages.message_menu.subscription.unfollow_thread');
+  setAttr(menu.querySelector('#toggle-subscription-status span.follow_thread'), 'messages.message_menu.subscription.follow_thread');
+  setAttr(menu.querySelector('#toggle-subscription-status span.unfollow_message'), 'messages.message_menu.subscription.unfollow_msg');
+  setAttr(menu.querySelector('#toggle-subscription-status span.follow_message'), 'messages.message_menu.subscription.follow_msg');
+  setAttr(menu.querySelector('#toggle-subscription-status span.loading_subscription_status'), 'messages.message_menu.subscription.loading');
+  setAttr(menu.querySelector('#share_message_link > a'), 'messages.message_menu.share');
+  setAttr(menu.querySelector('#copy_link > a'), 'messages.message_menu.copy_link');
+  setAttr(menu.querySelector('#mark_unread > a'), 'messages.message_menu.unread');
+  setAttr(menu.querySelector('#remind_me > a'), 'messages.message_menu.remind');
+  setAttr(menu.querySelector('#rxn_link > a'), 'messages.message_menu.reaction');
+  setAttr(menu.querySelector('#pin_link > a'), 'messages.message_menu.pin');
+  setAttr(menu.querySelector('#delete_link > a'), 'messages.message_menu.delete');
+
+  translate(json);
+}
+
 function translateTeamMenu(menu) {
   setAttr(menu.querySelector('#member_account_item > a'), 'messages.team_menu.account');
   setAttr(menu.querySelector('#member_prefs_item > a'), 'messages.team_menu.prefs');
@@ -283,6 +309,7 @@ function init() {
 
   translate(json);
 
+
   // watch menu panel
   new MutationObserver(() => {
     const teamMenu = document.querySelector('#menu.team_menu');
@@ -298,6 +325,15 @@ function init() {
     const channelPref = document.querySelector('#channel_prefs_dialog');
     if (channelPref) {
       translateChannelPrefsDialog(channelPref);
+      return;
+    }
+    const menuItems = document.querySelector('#menu_items');
+    if (menuItems) {
+      if (menuItems.querySelector('#adjust_dnd_schedule')) {
+        translateNotifyMenu(menuItems);
+      } else if (menuItems.querySelector('#delete_link')) {
+        translateMessageMenu(menuItems);
+      }
     }
   }).observe(document.querySelector('#client-ui'), { childList: true });
 

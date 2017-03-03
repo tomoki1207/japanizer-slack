@@ -10,6 +10,30 @@
         "never": "このPCでは有効にしない"
       }
     },
+    "menu_items": {
+      "snooze": {
+        "header": "スヌーズ通知:"
+      },
+      "dnd": "通知しない時間帯の設定",
+      "channel_notifications": ["", "の通知設定"],
+      "notifications": "全体の通知設定"
+    },
+    "message_menu": {
+      "subscription": {
+        "unfollow_thread": "スレッドのフォローを解除",
+        "follow_thread": "スレッドをフォロー",
+        "unfollow_msg": "メッセージのフォローを解除",
+        "follow_msg": "メッセージをフォロー",
+        "loading": "読み込み中..."
+      },
+      "share": "メッセージをシェア",
+      "copy_link": "リンクをコピー",
+      "unread": "未読にする",
+      "remind": ["後でリマインド"],
+      "reaction": "リアクションする",
+      "pin": { "reg": "Pin to (#\\w) …", "text": "$1へPin留め" },
+      "delete": "メッセージを削除"
+    },
     "team_menu": {
       "account": "プロフィール設定",
       "prefs": "表示設定",
