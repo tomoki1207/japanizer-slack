@@ -20,10 +20,22 @@
     },
     "message_menu": {
       "subscription": {
-        "unfollow_thread": "スレッドのフォローを解除",
-        "follow_thread": "スレッドをフォロー",
-        "unfollow_msg": "メッセージのフォローを解除",
-        "follow_msg": "メッセージをフォロー",
+        "unfollow_thread": {
+          "title": "スレッドのフォローを解除",
+          "desc": ["会話を", "から削除"]
+        },
+        "follow_thread": {
+          "title": "スレッドをフォロー",
+          "desc": ["新しいリプライを", "に表示"]
+        },
+        "unfollow_msg": {
+          "title": "メッセージのフォローを解除",
+          "desc": ["リプライを" ,"から除外"]
+        },
+        "follow_msg": {
+          "title": "メッセージをフォロー",
+          "desc": ["すべてのリプライを", "に表示"]
+        },
         "loading": "読み込み中..."
       },
       "share": "メッセージをシェア",
@@ -31,7 +43,7 @@
       "unread": "未読にする",
       "remind": ["後でリマインド"],
       "reaction": "リアクションする",
-      "pin": { "reg": "Pin to (#\\w) …", "text": "$1へPin留め" },
+      "pin": { "reg": "Pin to (#.+) …", "text": "$1へPin留め" },
       "delete": "メッセージを削除"
     },
     "team_menu": {
@@ -58,7 +70,9 @@
       "advanced": "追加設定",
       "prefs": "通知設定",
       "mute": { "reg": "Mute (#.+)", "text":"$1をミュート" },
-      "add_service": "Appまたはインテグレーション を追加"
+      "unmute": { "reg": "Unmute (#.+)", "text":"$1のミュートを解除" },
+      "add_service": "Appまたはインテグレーション を追加",
+      "leave": { "reg": "Leave (#.+)", "text":"$1から退室" }
     },
     "channel_prefs": {
       "header": { "reg": "Notification Preferences: #(\\w+)", "text": "通知設定: #$1" },

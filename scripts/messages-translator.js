@@ -12,10 +12,18 @@ function translateNotifyMenu(menu) {
 }
 
 function translateMessageMenu(menu) {
-  setAttr(menu.querySelector('#toggle-subscription-status span.unfollow_thread'), 'messages.message_menu.subscription.unfollow_thread');
-  setAttr(menu.querySelector('#toggle-subscription-status span.follow_thread'), 'messages.message_menu.subscription.follow_thread');
-  setAttr(menu.querySelector('#toggle-subscription-status span.unfollow_message'), 'messages.message_menu.subscription.unfollow_msg');
-  setAttr(menu.querySelector('#toggle-subscription-status span.follow_message'), 'messages.message_menu.subscription.follow_msg');
+  const unfollowThread = menu.querySelector('#toggle-subscription-status span.unfollow_thread');
+  setAttr(unfollowThread.querySelector('div.subscription_title'), 'messages.message_menu.subscription.unfollow_thread.title');
+  setAttr(unfollowThread.querySelector('div.subscription_desc'), 'messages.message_menu.subscription.unfollow_thread.desc');
+  const followThread = menu.querySelector('#toggle-subscription-status span.follow_thread');
+  setAttr(followThread.querySelector('div.subscription_title'), 'messages.message_menu.subscription.follow_thread.title');
+  setAttr(followThread.querySelector('div.subscription_desc'), 'messages.message_menu.subscription.follow_thread.desc');
+  const unfollowMsg = menu.querySelector('#toggle-subscription-status span.unfollow_message');
+  setAttr(unfollowMsg.querySelector('div.subscription_title'), 'messages.message_menu.subscription.unfollow_msg.title');
+  setAttr(unfollowMsg.querySelector('div.subscription_desc'), 'messages.message_menu.subscription.unfollow_msg.desc');
+  const followMsg = menu.querySelector('#toggle-subscription-status span.follow_message');
+  setAttr(followMsg.querySelector('div.subscription_title'), 'messages.message_menu.subscription.follow_msg.title');
+  setAttr(followMsg.querySelector('div.subscription_desc'), 'messages.message_menu.subscription.follow_msg.desc');
   setAttr(menu.querySelector('#toggle-subscription-status span.loading_subscription_status'), 'messages.message_menu.subscription.loading');
   setAttr(menu.querySelector('#share_message_link > a'), 'messages.message_menu.share');
   setAttr(menu.querySelector('#copy_link > a'), 'messages.message_menu.copy_link');
@@ -55,8 +63,14 @@ function translateChannelMenu(menu) {
   setAttr(menu.querySelector('#channel_details_item > a'), 'messages.channel_menu.details');
   setAttr(menu.querySelector('#channel_advanced_item > a'), 'messages.channel_menu.advanced');
   setAttr(menu.querySelector('#channel_prefs > a'), 'messages.channel_menu.prefs');
-  setAttr(menu.querySelector('#channel_mute_item > a'), 'messages.channel_menu.mute');
+  const mute = menu.querySelector('#channel_mute_item > a');
+  if (mute.textContent.includes('Unmute')) {
+    setAttr(mute, 'messages.channel_menu.unmute');
+  } else {
+    setAttr(mute, 'messages.channel_menu.mute');
+  }
   setAttr(menu.querySelector('#channel_add_service_item > a'), 'messages.channel_menu.add_service');
+  setAttr(menu.querySelector('#channel_leave_item > a'), 'messages.channel_menu.leave');
 
   translate(json);
 }
