@@ -8,9 +8,13 @@
       "signin_btn": "サインイン",
       "remember": ["サインインしたままにする"],
       "forgotpw": "パスワードを忘れた場合",
+      "forgot_email": "どのemailを使っていたか忘れた?",
       "create_account_tip": ["もしも", "のメールアドレスを持っているなら", "できます."],
       "create_account": "アカウントを作成",
-      "create_team_tip": ["チーム作ってみたい?"],
+      "dont_have_account": "このチームのアカウントをまだ持ってないですか?",
+      "contact_to_admin": "チームの管理者に招待してもらいましょう",
+      "already_signed": "既にサインインしているチーム:",
+      "create_team_tip": ["新しいチームを作りますか?"],
       "create_team": "チーム作成"
     },
     "error": {

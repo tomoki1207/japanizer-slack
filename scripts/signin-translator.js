@@ -14,9 +14,19 @@ function signin() {
   setAttr(contentForm.querySelector('button#signin_btn span.ladda-label'), 'signin.content.signin_btn');
   setAttr(contentForm.querySelector('label.checkbox.normal'), 'signin.content.remember');
   setAttr(contentForm.querySelector('#forgot-pw'), 'signin.content.forgotpw');
+  setAttr(contentForm.querySelector('#forgot_email > a'), 'signin.content.forgot_email');
   const real = document.querySelector('#page_contents div.real_content:last-child');
-  setAttr(real.querySelector('p:first-child'), 'signin.content.create_account_tip');
-  setAttr(real.querySelector('p:first-child a'), 'signin.content.create_account');
+  const createAccount = real.querySelector('p:first-child');
+  if (createAccount.textContent.includes('Don\'t have an account on')) {
+    setAttr(real.querySelector('span:first-child'), 'signin.content.dont_have_account');
+    setAttr(real.querySelector('span:last-child'), 'signin.content.contact_to_admin');
+  } else if (createAccount.textContent.startsWith('If you have')) {
+    setAttr(createAccount, 'signin.content.create_account_tip');
+    setAttr(real.querySelector('p:first-child a'), 'signin.content.create_account');
+  }
+  if (real.querySelector('a.btn')) {
+    setAttr(real.querySelector('p:nth-child(2)'), 'signin.content.already_signed');
+  }
   setAttr(real.querySelector('p:last-child'), 'signin.content.create_team_tip');
   setAttr(real.querySelector('p:last-child a'), 'signin.content.create_team');
 
