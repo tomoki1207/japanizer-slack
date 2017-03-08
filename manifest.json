@@ -41,6 +41,15 @@
         "lib/messages-translator.js"
       ],
       "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://*.slack.com/invite/*"
+      ],
+      "js" : [
+        "lib/invite-translator.js"
+      ],
+      "run_at": "document_end"
     }
   ]
 }

@@ -14,6 +14,7 @@ const paths = {
     'signout-translator.js',
     'forgot-translator.js',
     'messages-translator.js',
+    'invite-translator.js',
   ],
 };
 
